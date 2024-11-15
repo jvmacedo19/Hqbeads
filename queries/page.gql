@@ -1,0 +1,6 @@
+query Page($slug: String!) {
+  pageBy(uri: $slug) {
+    content
+    title
+  }
+}

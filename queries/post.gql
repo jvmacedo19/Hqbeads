@@ -1,0 +1,9 @@
+query Post($slug: String!) {
+	postBy(slug: $slug) {
+		id
+		title
+		date
+        content
+		excerpt(format: RAW)
+	}
+}
