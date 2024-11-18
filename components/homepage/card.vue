@@ -36,6 +36,9 @@ export default {
     text-align: center;
     margin: auto;
     padding: 5% 10%;
+    background-image: url("public/assets/homepage/FUNDO-MARROM.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
 
     h2 {
         padding: 2.5% 0;
@@ -63,14 +66,15 @@ export default {
 
         .empreendimentoitem1 {
             flex: 1;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("public/assets/projetos-de-engenharia/Rectangle-7 (2).webp");
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("public/assets/homepage/image 3.webp");
             background-size: cover;
+            background-repeat: no-repeat;
             height: 80vh;
             padding: 5%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 25px;
+            border-radius: 10px;
             flex-direction: column;
 
             @media screen {
@@ -97,14 +101,15 @@ export default {
 
         .empreendimentoitem2 {
             flex: 1;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("public/assets/projetos-de-engenharia/Rectangle-8 (1).webp");
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("public/assets/homepage/image 2.webp");
             background-size: cover;
+            background-repeat: no-repeat;
             height: 80vh;
             padding: 5%;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 25px;
+            border-radius: 10px;
             flex-direction: column;
 
             @media screen {

@@ -2,7 +2,7 @@
     <div id="HQ-footer">
         <div class="footer">
             <div class="footer-area">
-                <img src="~@/public/assets/homepage/unify.svg" alt="logo HQ" />
+                <img src="~@/public/assets/homepage/hqbeds_logo_1 2.webp" alt="logo HQ" />
             </div>
             <div class="footer-area">
                 <h3>endereço</h3>
@@ -22,7 +22,21 @@
             <div class="footer-area">
                 <h3>funcionamento</h3>
                 <p>Nosso time está disponível<br />das 8:00 às 18:00.</p>
-                <HQButton valor="Reserve agora"></HQButton>
+                <HQButton valor="Reserve agora" style="margin-top: 15px;"></HQButton>
+                <div class="menu-svg">
+                    <a href="">
+                        <img src="~@/public/assets/homepage/instagram copy.svg" alt="ícone instagram"
+                            style="width: 20px; margin-right: 10px" />
+                    </a>
+                    <a href="">
+                        <img src="~@/public/assets/homepage/facebook-circle-svgrepo-com copy.svg" alt="ícone facebook"
+                            style="width: 20px;margin-right: 10px" />
+                    </a>
+                    <a href="">
+                        <img src="~@/public/assets/homepage/pinterest-svgrepo-com copy.svg" alt="ícone pinterest"
+                            style="width: 20px;margin-right: 10px" />
+                    </a>
+                </div>
             </div>
         </div>
         <div class="copy">
@@ -49,8 +63,8 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 25vh;
-    padding: 2% 10%;
+    height: 30vh;
+    padding: 2.5% 10%;
     background-color: #f7ebda;
 
     .footer {
@@ -66,6 +80,10 @@ export default {
             flex-direction: column;
             align-items: baseline;
 
+            img {
+                width: 250px;
+            }
+
             h3 {
                 text-transform: uppercase;
                 font-size: 1.2rem;
@@ -78,6 +96,7 @@ export default {
                 line-height: 1.5;
                 color: #333;
                 text-decoration: none;
+                font-weight: 500;
             }
 
             ul {
@@ -98,6 +117,10 @@ export default {
                 }
 
             }
+            .menu-svg{
+                display: flex;
+                margin-top: 10px;
+            }
         }
     }
 
@@ -106,6 +129,10 @@ export default {
         font-size: 0.9rem;
         color: #555;
         text-align: center;
+
+        p {
+            font-weight: 500 !important;
+        }
     }
 }
 </style>

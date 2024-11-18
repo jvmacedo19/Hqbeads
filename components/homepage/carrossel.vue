@@ -6,24 +6,24 @@
                 <v-carousel-item v-for="(slide, i) in slides" :key="i">
                     <v-sheet :color="colors[i]" height="100%">
                         <div class="d-flex fill-height justify-center align-center">
-                            <div class="text-h2">
-                                {{ slide }} Slide
+                            <div class="texto">
+                                {{ slide }}
                             </div>
                         </div>
                     </v-sheet>
                 </v-carousel-item>
             </v-carousel>
         </div>
-        <HQButton valor="Reserve já"></HQButton>
+        <HQButton style="padding: 2.5% 0;" valor="Reserve já"></HQButton>
         <div class="linha"></div>
         <div class="galeria">
-            <img src="public/assets/homepage/graph.png">
+            <img src="~@/public/assets/homepage/image 4.webp">
             <div class="texto-galeria">
                 <h2>Nossa galeria</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem
                     sagittis sed. Sed at mi ac odio luctus imperdiet nec at nisi. Mauris scelerisque lorem et volutpat
                     ultrices.</p>
-                <HQButton valor="Reserve já"></HQButton>
+                <HQButton valor="Reserve já" style="margin-top: 15px;"></HQButton>
             </div>
         </div>
         <div class="linha"></div>
@@ -49,14 +49,14 @@ export default {
     data() {
         return {
             colors: [
-                'indigo',
-                'warning',
-                'pink darken-2',
+                "#f7ebda",
+                "#f7ebda",
+                "#f7ebda",
             ],
             slides: [
-                'First',
-                'Second',
-                'Third',
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem',
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem',
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem ',
             ],
         }
     },
@@ -74,6 +74,9 @@ export default {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    background-image: url("public/assets/homepage/FUNDO-BRANCO.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
 
     h2 {
         text-align: center;
@@ -83,36 +86,62 @@ export default {
 
     .avaliacao {
         display: contents;
+
+        .texto{
+            font-family: "Montserrat", sans-serif;
+            font-size: 24px;
+            font-weight: 300;
+        }
+
+        .v-btn--variant-elevated {
+            box-shadow: none;
+            background: none;
+        }
     }
 
     span {
-        color: #fff;
         font-size: 18px;
     }
 
     .linha {
         width: 40%;
         height: 2px;
-        background-color: #000;
+        background-color: #f7ebda;
         margin-top: 30px;
     }
-    .galeria{
+
+    .galeria {
         display: flex;
         margin: 5% 0;
-        img{
-            width: 50%;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            height: 400px;
             margin-right: 30px;
+            flex: 1;
+            border-radius: 10px;
         }
-        .texto-galeria{
+
+        .texto-galeria {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            h2{
+            flex: 1;
+
+            h2 {
                 text-align: start;
             }
-            p{
+
+            p {
                 width: 60%;
             }
+        }
+    }
+
+    .mapa {
+        h2 {
+            padding: 2.5% 0 2% 0;
         }
     }
 }

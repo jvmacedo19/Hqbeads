@@ -8,6 +8,11 @@
                             <div class='text'>
                                 <h1>Uma frase muito interessante</h1>
                                 <h2>Algo muito bacana vai acontecer aqui</h2>
+                                <div class="reserva">
+                                    <input type="date">
+                                    <input type="date">
+                                    <HQButton valor="Reservar agora"></HQButton>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -31,39 +36,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$bg-color-light: #eee;
-$text-color-light: #251E46;
-$bg-color-dark: #111;
-$text-color-dark: #fff;
-
-:root {
-    --bg-color: #{$bg-color-light};
-    --text-color: #{$text-color-light};
-}
-
-[data-theme='dark'] {
-    --bg-color: #{$bg-color-dark};
-    --text-color: #{$text-color-dark};
-}
 
 #homepage-banner {
     background-size: cover !important;
     background-repeat: no-repeat !important;
+    background-image: url("public/assets/homepage/image 1.webp");
 
     @media screen {
         @media (max-width: 800px) {
             background-position: center;
         }
-
-        @media(prefers-color-scheme:dark) {
-            filter: grayscale(100%);
-            background: linear-gradient(rgba(17, 17, 17, 0.8), rgba(0, 0, 0, 0.8)), url('public/assets/homepage/banner (1) (1).webp');
-        }
-
-        @media(prefers-color-scheme:light) {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('public/assets/homepage/banner (1) (1).webp');
-        }
-
     }
 
     .homepage-principal {
@@ -94,8 +76,9 @@ $text-color-dark: #fff;
 
                         .text {
                             h1 {
-                                font-size: 45px;
+                                font-size: 75px !important;
                                 font-weight: 400;
+                                font-family: "Moon Dance", cursive;
 
                                 @media screen {
                                     @media (max-width: 800px) {
@@ -107,7 +90,9 @@ $text-color-dark: #fff;
 
                             h2 {
                                 font-size: 27px;
-                                font-weight: 300;
+                                font-weight: 500;
+                                font-family: "Montserrat", sans-serif;
+                                color: #FFF !important;
 
                                 @media screen {
                                     @media (max-width: 800px) {
@@ -116,6 +101,21 @@ $text-color-dark: #fff;
                                     }
                                 }
                             }
+
+                            .reserva{
+                                display: flex;
+                                background-color: #FFF;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 25px;
+                                border-radius: 15px;
+                                margin-top: 25px;
+
+                                input{
+                                    border: 1px solid #695641;
+                                }
+                            }
+
                         }
 
                         .v-btn {

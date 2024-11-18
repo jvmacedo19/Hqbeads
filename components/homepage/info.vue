@@ -15,37 +15,39 @@
         <div id="about-solucoes">
             <div class='about'>
                 <div class="solucoes1">
-                    <div class='aboutarea'>
+                    <div class='aboutarea'
+                        style="background-image: url('assets/homepage/image 6.webp');background-size: cover;background-repeat: no-repeat; ">
                         <div class='text'>
-                            <h3>Programações</h3>
-                            <p>Disseminar projetos de automação e monitoramento, visando economia, otimização e
-                                sustentabilidade a negócios de diversos portes.</p>
+                            <h2 style="color: #fff;">Programações</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut
+                                ornare lorem sagittis sed. </p>
                         </div>
                     </div>
-                    <div class='aboutarea'>
+                    <div class='aboutarea'
+                        style="background-image: url('assets/homepage/image.webp');background-size: cover;background-repeat: no-repeat; ">
                         <div class='text'>
-                            <h3>Café da manhã</h3>
-                            <p>Estar no topo como referência em automação, através da eficácia dos projetos e satisfação
-                                dos
-                                clientes.</p>
+                            <h2 style="color: #fff;">TV e filmes</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut
+                                ornare lorem sagittis sed. </p>
                         </div>
                     </div>
                 </div>
                 <div class="solucoes2">
-                    <div class='aboutarea'>
+                    <div class='aboutarea'
+                        style="background-image: url('assets/homepage/image 6.webp');background-size: cover;background-repeat: no-repeat; ">
                         <div class='text'>
-                            <h3>TV e filmes</h3>
-                            <p>Disseminar projetos de automação e monitoramento, visando economia, otimização e
-                                sustentabilidade a negócios de diversos portes.</p>
+                            <h2 style="color: #fff;">Café da manhã</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut
+                                ornare lorem sagittis sed. </p>
                         </div>
                     </div>
-                    <div class='aboutarea'>
-                        <img >
+                    <div class='aboutarea'
+                        style="background-image: url('assets/homepage/image.webp');background-size: cover;background-repeat: no-repeat; ">
+                        <img>
                         <div class='text'>
-                            <h3>Melhor preço garantido</h3>
-                            <p>Estar no topo como referência em automação, através da eficácia dos projetos e satisfação
-                                dos
-                                clientes.</p>
+                            <h2 style="color: #fff;">Melhor preço garantido</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut
+                                ornare lorem sagittis sed. </p>
                         </div>
                     </div>
                 </div>
@@ -70,6 +72,9 @@ export default {
 <style lang="scss" scoped>
 #HQ-info {
     padding: 5% 10%;
+    background-image: url("public/assets/homepage/FUNDO-BRANCO.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
 
     .info-texto {
         text-align: center;
@@ -107,7 +112,6 @@ export default {
                 align-items: center;
                 text-align: center;
                 flex: 1;
-                background-color: var(--bg-solution);
                 border-radius: 10px;
                 padding: 40px;
                 margin: 0 0 40px 40px;
@@ -126,7 +130,6 @@ export default {
                 .image1 {
                     width: 90px;
                     height: 90px;
-                    background-image: var(--bg-alvo) !important;
                     background-position: center;
                     background-size: cover;
 
@@ -140,7 +143,6 @@ export default {
                 .image2 {
                     width: 90px;
                     height: 90px;
-                    background-image: var(--bg-monitor) !important;
                     background-position: center;
                     background-size: cover;
 
@@ -154,7 +156,6 @@ export default {
                 .image3 {
                     width: 90px;
                     height: 90px;
-                    background-image: var(--bg-balanca) !important;
                     background-position: center;
                     background-size: cover;
 
@@ -170,10 +171,10 @@ export default {
                     flex-direction: column;
                     align-items: center;
                     text-align: center;
-                    color: #000;
+                    color: #fff;
                     padding: 0 0 2.5% 0;
 
-                    h3 {
+                    h2 {
                         font-size: 36px;
 
                         @media (min-width: 801px) and (max-width: 1440px) {
@@ -194,8 +195,9 @@ export default {
                     }
                 }
             }
-            .aboutarea:hover{
-                background-color: #695641;
+
+            .aboutarea:hover {
+                background: #695641;
             }
         }
     }
