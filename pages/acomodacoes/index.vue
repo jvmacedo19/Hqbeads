@@ -1,10 +1,11 @@
 <template>
     <div class="main">
         <HQMenu></HQMenu>
-        <HomepageBanner></HomepageBanner>
-        <HomepageInfo></HomepageInfo>
-        <HomepageCard></HomepageCard>
-        <HomepageCarrossel></HomepageCarrossel>
+        <AcomodacoesBanner></AcomodacoesBanner>
+        <AcomodacoesModeloUm></AcomodacoesModeloUm>
+        <AcomodacoesModeloDois></AcomodacoesModeloDois>
+        <AcomodacoesModeloTres></AcomodacoesModeloTres>
+        <AcomodacoesModeloQuatro></AcomodacoesModeloQuatro>
         <HQFooter></HQFooter>
     </div>
 </template>
@@ -15,7 +16,6 @@ import HQMenu from "@/components/geral/menu.vue"
 import HQFooter from "@/components/geral/footer.vue"
 
 export default {
-    name: 'homepage',
     components: {
         HQMenu,
         HQFooter,

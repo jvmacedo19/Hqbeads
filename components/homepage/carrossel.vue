@@ -22,7 +22,8 @@
                 <h2>Nossa galeria</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem
                     sagittis sed. Sed at mi ac odio luctus imperdiet nec at nisi. Mauris scelerisque lorem et volutpat
-                    ultrices.</p>
+                    ultrices.
+                </p>
                 <HQButton valor="Reserve já" style="margin-top: 15px;"></HQButton>
             </div>
         </div>
@@ -54,9 +55,9 @@ export default {
                 "#f7ebda",
             ],
             slides: [
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem',
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem',
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem ',
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem',
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem',
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem',
             ],
         }
     },
@@ -87,10 +88,12 @@ export default {
     .avaliacao {
         display: contents;
 
-        .texto{
+        .texto {
             font-family: "Montserrat", sans-serif;
             font-size: 24px;
             font-weight: 300;
+            width: 80%;
+            text-align: center;
         }
 
         .v-btn--variant-elevated {
@@ -116,11 +119,26 @@ export default {
         justify-content: center;
         align-items: center;
 
+        @media screen {
+            @media (max-width: 800px) {
+                flex-direction: column;
+            }
+        }
+
         img {
             height: 400px;
             margin-right: 30px;
             flex: 1;
             border-radius: 10px;
+
+            @media screen {
+                @media (max-width: 800px) {
+                    width: 280px;
+                    margin-right: 0;
+                }
+            }
+
+
         }
 
         .texto-galeria {
@@ -129,12 +147,32 @@ export default {
             justify-content: center;
             flex: 1;
 
+            @media screen {
+                @media (max-width: 800px) {
+                    align-items: center;
+                }
+            }
+
             h2 {
                 text-align: start;
+
+                @media screen {
+                    @media (max-width: 800px) {
+                        text-align: center;
+                    }
+                }
             }
 
             p {
                 width: 60%;
+
+                @media screen {
+                    @media (max-width: 800px) {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+
             }
         }
     }

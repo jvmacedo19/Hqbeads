@@ -63,10 +63,9 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 30vh;
     padding: 2.5% 10%;
     background-color: #f7ebda;
-
+    
     .footer {
         display: flex;
         flex-wrap: wrap;
@@ -80,59 +79,81 @@ export default {
             flex-direction: column;
             align-items: baseline;
 
-            img {
-                width: 250px;
-            }
-
-            h3 {
-                text-transform: uppercase;
-                font-size: 1.2rem;
-                margin-bottom: 10px;
-            }
-
-            p,
-            a {
-                font-size: 1rem;
-                line-height: 1.5;
-                color: #333;
-                text-decoration: none;
-                font-weight: 500;
-            }
-
-            ul {
-                list-style: none;
-                padding: 0;
-
-                li {
-                    margin-bottom: 5px;
-
-                    a {
-                        color: #333;
-                        text-decoration: none;
-
-                        &:hover {
-                            text-decoration: underline;
-                        }
-                    }
+            @media screen {
+                @media (max-width: 800px) {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    margin: auto;
+                    padding: 15px;
+                    text-align: center;
                 }
-
-            }
-            .menu-svg{
-                display: flex;
-                margin-top: 10px;
             }
         }
-    }
 
-    .copy {
-        margin-top: 20px;
-        font-size: 0.9rem;
-        color: #555;
-        text-align: center;
+        img {
+            width: 250px;
 
-        p {
-            font-weight: 500 !important;
+            @media screen {
+                @media (max-width: 800px) {
+                    padding: 15px;
+                    margin: auto;
+                }
+            }
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        p,
+        a {
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                margin-bottom: 5px;
+
+                a {
+                    color: #333;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+        }
+
+        .menu-svg {
+            display: flex;
+            margin-top: 10px;
         }
     }
 }
+
+.copy {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+    text-align: center;
+
+    p {
+        font-weight: 500 !important;
+    }
+}
+
 </style>

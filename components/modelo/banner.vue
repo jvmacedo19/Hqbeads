@@ -1,18 +1,12 @@
 <template>
-    <div id="homepage-banner">
-        <div class="homepage-principal">
+    <div id="modelo-banner">
+        <div class="modelo-principal">
             <div class='banner'>
                 <div class='list'>
                     <div class='item'>
                         <div class='content'>
                             <div class='text'>
-                                <h1>Uma frase muito interessante</h1>
-                                <h2>Algo muito bacana vai acontecer aqui</h2>
-                                <div class="reserva">
-                                    <input type="date">
-                                    <input type="date">
-                                    <HQButton valor="Reservar agora"></HQButton>
-                                </div>
+                                <h1>Modelo número 1</h1>
                             </div>
                         </div>
                     </div>
@@ -27,7 +21,7 @@
 import HQButton from '@/components/geral/button.vue';
 
 export default {
-    name: 'HomepageBanner',
+    name: 'modeloBanner',
     components: {
         HQButton
     }
@@ -36,10 +30,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#homepage-banner {
+#modelo-banner {
     background-size: cover !important;
     background-repeat: no-repeat !important;
-    background-image: url("public/assets/homepage/image 1.webp");
+    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('public/assets/modelo/image-4.webp');
+    background-position: bottom;
 
     @media screen {
         @media (max-width: 800px) {
@@ -47,9 +42,9 @@ export default {
         }
     }
 
-    .homepage-principal {
+    .modelo-principal {
         .banner {
-            height: 100vh;
+            height: 55vh;
             overflow: hidden;
             display: flex;
             justify-content: center;
@@ -101,47 +96,6 @@ export default {
                                 }
                             }
 
-                            .reserva {
-                                display: flex;
-                                background-color: #FFF;
-                                justify-content: space-between;
-                                align-items: center;
-                                padding: 25px;
-                                border-radius: 15px;
-                                margin-top: 25px;
-
-                                @media screen {
-                                    @media (max-width: 800px) {
-                                        flex-direction: column;
-                                    }
-                                }
-
-                                input {
-                                    border: 1px solid #695641;
-                                    padding: 5px;
-
-                                    @media screen {
-                                        @media (max-width: 800px) {
-                                           margin-bottom: 10px;
-                                        }
-                                    }
-                                }
-                            }
-
-                        }
-
-                        .v-btn {
-                            justify-content: center;
-                            align-items: center;
-                            background-color: transparent;
-                            border-radius: 10px;
-                            font-weight: 500;
-                            font-size: 1.25em;
-                            margin-top: 25px;
-                            padding: 35px 50px;
-                            display: flex;
-                            border: 1px solid #FFF;
-                            color: #FFF;
                         }
                     }
                 }

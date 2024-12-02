@@ -23,13 +23,14 @@ export default {
         justify-content: center;
         align-items: center;
         background-color: #695641;
-        border-radius: 10px;
+        border-radius: 5px;
         font-weight: 500;
-        padding: 25px 50px;
+        padding: 25px 45px;
         display: flex;
         text-transform: none;
         color: #fff;
         font-family: "Montserrat", sans-serif;
+        font-size: 18px;
 
         @media screen {
             @media(max-width: 800px) {

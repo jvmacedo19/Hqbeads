@@ -3,11 +3,11 @@
         <div class='empreedimentoimage'>
             <div class='empreendimentoitem1'>
                 <p>Atrações</p>
-                <HQButton  valor="Saiba mais"></HQButton>
+                <HQButton valor="Reserve já"></HQButton>
             </div>
             <div class='empreendimentoitem2'>
                 <p>Acomodações</p>
-                <HQButton valor="Saiba mais"></HQButton>
+                <HQButton valor="Reserve já"></HQButton>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@ export default {
     components: {
         HQButton,
     }
-        
+
 
 };
 
@@ -88,13 +88,19 @@ export default {
             span {
                 color: #FFF;
                 font-size: 18px;
-                font-weight: 300;
+                font-weight: 500;
             }
 
             p {
                 color: #FFF;
                 font-size: 48px;
                 font-weight: 300;
+
+                @media screen {
+                    @media (max-width: 800px) {
+                        font-size: 40px;
+                    }
+                }
             }
 
         }
@@ -122,13 +128,20 @@ export default {
             span {
                 color: #FFF;
                 font-size: 18px;
-                font-weight: 300;
+                font-weight: 500;
             }
 
             p {
                 color: #FFF;
                 font-size: 48px;
                 font-weight: 300;
+
+                @media screen {
+                    @media (max-width: 800px) {
+                        font-size: 40px;
+                    }
+                }
+
             }
         }
     }

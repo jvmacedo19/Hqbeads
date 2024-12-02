@@ -1,10 +1,12 @@
 <template>
     <div class="main">
         <HQMenu></HQMenu>
-        <HomepageBanner></HomepageBanner>
-        <HomepageInfo></HomepageInfo>
-        <HomepageCard></HomepageCard>
-        <HomepageCarrossel></HomepageCarrossel>
+        <PropriedadeBanner></PropriedadeBanner>
+        <PropriedadeSobre></PropriedadeSobre>
+        <PropriedadeInfo></PropriedadeInfo>
+        <PropriedadeModeloDois></PropriedadeModeloDois>
+        <PropriedadeVizinhanca></PropriedadeVizinhanca>
+        <PropriedadeCarrossel></PropriedadeCarrossel>
         <HQFooter></HQFooter>
     </div>
 </template>
