@@ -17,7 +17,7 @@
                 </div>
                 <a href="/acomodacoes" class="menu-item">Acomodações</a>
                 <a href="/atracoes" class="menu-item">Atrações</a>
-                <a href="" class="menu-item">Galeria</a>
+                <a href="/galeria" class="menu-item">Galeria</a>
             </div>
             <div class="menu-svg">
                 <a href="">
