@@ -1,6 +1,6 @@
 <template>
     <div id="HQ-button">
-        <v-btn>{{ valor }}</v-btn>
+        <v-btn href="/reserva" tag="button">{{ valor }}</v-btn>
     </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
 
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 
 #HQ-button {
     .v-btn {
@@ -31,6 +31,7 @@ export default {
         color: #fff;
         font-family: "Montserrat", sans-serif;
         font-size: 18px;
+        width: 200px !important;
 
         @media screen {
             @media(max-width: 800px) {
