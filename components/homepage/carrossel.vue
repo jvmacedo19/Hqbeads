@@ -22,6 +22,8 @@
                 <h2>Nossa galeria</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem
                     sagittis sed. Sed at mi ac odio luctus imperdiet nec at nisi. Mauris scelerisque lorem et volutpat
+                    ultrices.Mauris scelerisque lorem et volutpat
+                    ultrices..Mauris scelerisque lorem et volutpat
                     ultrices.
                 </p>
                 <HQButton valor="Reserve já" style="margin-top: 15px;"></HQButton>
@@ -30,6 +32,9 @@
         <div class="linha"></div>
         <div class="mapa">
             <h2>Onde estamos</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem
+                sagittis sed. Sed at mi ac odio luctus imperdiet nec at nisi.
+            </p>
             <div style="width: 80vw;">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13476.178095853405!2d-117.16661169999999!3d32.7180984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d953e7e8e96f59%3A0x4e9e391baad12c80!2sCloudbeds!5e0!3m2!1sen!2sus!4v1696119432384!5m2!1sen!2sus"
@@ -70,7 +75,7 @@ export default {
 
 <style lang="scss">
 #HQ-carrossel {
-    padding: 5% 10%;
+    padding: 5% 10% 7% 10%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -81,7 +86,7 @@ export default {
 
     h2 {
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 5%;
         font-size: 48px;
     }
 
@@ -110,7 +115,7 @@ export default {
         width: 40%;
         height: 2px;
         background-color: #f7ebda;
-        margin-top: 30px;
+        margin-top: 2.5%;
     }
 
     .galeria {
@@ -164,7 +169,8 @@ export default {
             }
 
             p {
-                width: 60%;
+
+                margin-bottom: 5%;
 
                 @media screen {
                     @media (max-width: 800px) {
@@ -178,8 +184,20 @@ export default {
     }
 
     .mapa {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
         h2 {
-            padding: 2.5% 0 2% 0;
+            padding: 5% 0 0 0;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 5%;
+            width: 35%;
         }
     }
 }

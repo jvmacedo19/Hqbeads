@@ -16,7 +16,8 @@
             <div class='about'>
                 <div class="solucoes1">
                     <div class='aboutarea'
-                        style="background-image: url('assets/homepage/image 6.webp');background-size: cover;background-repeat: no-repeat; ">
+                        style="background: #6c563f;background-size: cover;background-repeat: no-repeat; ">
+                        <v-icon size="75" >mdi-compass</v-icon>
                         <div class='text'>
                             <h2 style="color: #fff;">Programações</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut
@@ -24,7 +25,8 @@
                         </div>
                     </div>
                     <div class='aboutarea'
-                        style="background-image: url('assets/homepage/image.webp');background-size: cover;background-repeat: no-repeat; ">
+                        style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/homepage/image.webp');background-size: cover;background-repeat: no-repeat; ">
+                        <v-icon size="75" >mdi-television</v-icon>
                         <div class='text'>
                             <h2 style="color: #fff;">TV e filmes</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut
@@ -34,7 +36,8 @@
                 </div>
                 <div class="solucoes2">
                     <div class='aboutarea'
-                        style="background-image: url('assets/homepage/image 6.webp');background-size: cover;background-repeat: no-repeat; ">
+                        style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/homepage/image 6.webp');background-size: cover;background-repeat: no-repeat; ">
+                        <v-icon size="75">mdi-television</v-icon>
                         <div class='text'>
                             <h2 style="color: #fff;">Café da manhã</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut
@@ -42,8 +45,8 @@
                         </div>
                     </div>
                     <div class='aboutarea'
-                        style="background-image: url('assets/homepage/image.webp');background-size: cover;background-repeat: no-repeat; ">
-                        <img>
+                        style="background: #6c563f;background-size: cover;background-repeat: no-repeat; ">
+                        <v-icon size="75" >mdi-currency-usd</v-icon>
                         <div class='text'>
                             <h2 style="color: #fff;">Melhor preço garantido</h2>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut
@@ -81,17 +84,16 @@ export default {
 
         h2 {
             font-size: 48px;
-            margin-bottom: 30px;
+            margin-bottom: 5%;
         }
 
         p {
             font-size: 18px;
-            margin-bottom: 30px;
+            margin-bottom: 5%;
         }
     }
 
     #about-solucoes {
-        padding: 60px 5% 5% 5%;
 
         @media(max-width:800px) {
             margin: auto;

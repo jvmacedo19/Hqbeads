@@ -7,8 +7,8 @@
             <div class="footer-area">
                 <h3>endereço</h3>
                 <p>Rua Não Sei Qual, 33<br />Cidade, ES, Brasil</p>
-                <p><a href="mailto:email@unify.com">email@unify.com</a></p>
-                <p>+55 00 0000-0000</p>
+                <p>    <v-icon size="32" color="#695640">mdi-email</v-icon> <a href="mailto:email@unify.com">email@unify.com</a></p>
+                <p><v-icon size="32" color="#695640">mdi-phone</v-icon> +55 00 0000-0000</p>
             </div>
             <div class="footer-area">
                 <h3>mapa do site</h3>
@@ -22,7 +22,7 @@
             <div class="footer-area">
                 <h3>funcionamento</h3>
                 <p>Nosso time está disponível<br />das 8:00 às 18:00.</p>
-                <HQButton valor="Reserve agora" style="margin-top: 15px;"></HQButton>
+                <v-btn color="#695640">Reserve agora</v-btn>
                 <div class="menu-svg">
                     <a href="">
                         <img src="~@/public/assets/homepage/instagram copy.svg" alt="ícone instagram"
@@ -142,11 +142,15 @@ export default {
             display: flex;
             margin-top: 10px;
         }
+        .v-btn{
+            text-transform: none;
+            font-weight: 300;
+        }
     }
 }
 
 .copy {
-    margin-top: 20px;
+    margin-top: 2.5%;
     font-size: 0.9rem;
     color: #555;
     text-align: center;

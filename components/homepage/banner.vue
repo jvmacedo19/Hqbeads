@@ -9,8 +9,8 @@
                                 <h1>Uma frase muito interessante</h1>
                                 <h2>Algo muito bacana vai acontecer aqui</h2>
                                 <div class="reserva">
-                                    <input type="date">
-                                    <input type="date">
+                                    <v-text-field label="Check-in" type="date" variant="solo"></v-text-field>
+                                    <v-text-field label="Check-out" type="date" variant="solo"></v-text-field>
                                     <HQButton valor="Reservar agora"></HQButton>
                                 </div>
                             </div>
@@ -26,6 +26,7 @@
 
 import HQButton from '@/components/geral/button.vue';
 
+
 export default {
     name: 'HomepageBanner',
     components: {
@@ -39,7 +40,7 @@ export default {
 #homepage-banner {
     background-size: cover !important;
     background-repeat: no-repeat !important;
-    background-image: url("public/assets/homepage/image 1.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("public/assets/homepage/image 1.webp");
 
     @media screen {
         @media (max-width: 800px) {
@@ -109,6 +110,7 @@ export default {
                                 padding: 25px;
                                 border-radius: 15px;
                                 margin-top: 25px;
+                                gap: 20px;
 
                                 @media screen {
                                     @media (max-width: 800px) {
@@ -118,11 +120,11 @@ export default {
 
                                 input {
                                     border: 1px solid #695641;
-                                    padding: 5px;
+                                    padding: 11px;
 
                                     @media screen {
                                         @media (max-width: 800px) {
-                                           margin-bottom: 10px;
+                                            margin-bottom: 10px;
                                         }
                                     }
                                 }
@@ -136,17 +138,24 @@ export default {
                             background-color: transparent;
                             border-radius: 10px;
                             font-weight: 500;
-                            font-size: 1.25em;
                             margin-top: 25px;
-                            padding: 35px 50px;
                             display: flex;
                             border: 1px solid #FFF;
                             color: #FFF;
+                        }
+
+                        #HQ-button {
+                            .v-btn {
+                                padding: 20px !important;
+                            }
                         }
                     }
                 }
             }
         }
     }
+    ::v-deep .v-input__details {
+                                    display: none;
+                                }
 }
 </style>

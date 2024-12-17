@@ -22,16 +22,13 @@
             </div>
             <div class="menu-svg">
                 <a href="">
-                    <img src="~@/public/assets/homepage/instagram.svg" alt="ícone instagram"
-                        style="width: 20px; margin-right: 10px" />
+                    <v-icon color="white" style="width: 20px; margin-right: 10px;">mdi-instagram</v-icon>
                 </a>
                 <a href="">
-                    <img src="~@/public/assets/homepage/facebook-circle-svgrepo-com.svg" alt="ícone facebook"
-                        style="width: 20px;margin-right: 10px" />
+                    <v-icon color="white" style="width: 20px; margin-right: 10px;">mdi-facebook</v-icon>
                 </a>
                 <a href="">
-                    <img src="~@/public/assets/homepage/pinterest-svgrepo-com.svg" alt="ícone pinterest"
-                        style="width: 20px;margin-right: 10px" />
+                    <v-icon color="white" style="width: 20px; margin-right: 10px;">mdi-pinterest</v-icon>
                 </a>
             </div>
         </div>
@@ -114,8 +111,7 @@ export default {
 
         .logo img {
             width: 100%;
-            height: 55px;
-            opacity: 75%;
+            height: 40px;
 
             &:hover {
                 opacity: 100%;
@@ -128,7 +124,7 @@ export default {
             margin-right: 50px;
             font-size: 16px;
             font-weight: bold;
-            font-weight: 300;
+            font-weight: 500;
             transition: color 0.3s, text-shadow 0.3s;
 
             &:hover {
@@ -173,6 +169,7 @@ export default {
             }
         }
     }
+
     .mobile-menu {
         display: none;
 

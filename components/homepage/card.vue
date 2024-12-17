@@ -45,7 +45,6 @@ export default {
         font-size: 36px;
         font-weight: 400;
 
-
         @media screen {
 
             @media (max-width:800px) {
@@ -56,7 +55,7 @@ export default {
 
     .empreedimentoimage {
         display: flex;
-        gap: 5%;
+        gap: 3%;
 
         @media screen {
             @media (max-width:800px) {
@@ -88,13 +87,15 @@ export default {
             span {
                 color: #FFF;
                 font-size: 18px;
-                font-weight: 500;
+                font-weight: 300;
             }
 
             p {
                 color: #FFF;
-                font-size: 48px;
+                font-size: 72px;
                 font-weight: 300;
+                font-family: "Moon Dance", cursive;
+
 
                 @media screen {
                     @media (max-width: 800px) {
@@ -128,13 +129,15 @@ export default {
             span {
                 color: #FFF;
                 font-size: 18px;
-                font-weight: 500;
+                font-weight: 300;
             }
 
             p {
                 color: #FFF;
-                font-size: 48px;
+                font-size: 72px;
                 font-weight: 300;
+                font-family: "Moon Dance", cursive;
+
 
                 @media screen {
                     @media (max-width: 800px) {
