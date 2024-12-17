@@ -93,6 +93,10 @@ export default {
     .avaliacao {
         display: contents;
 
+        .v-carousel{
+            border-radius: 20px;
+        }
+
         .texto {
             font-family: "Montserrat", sans-serif;
             font-size: 24px;
@@ -114,7 +118,7 @@ export default {
     .linha {
         width: 40%;
         height: 2px;
-        background-color: #f7ebda;
+        background-color: #6f5d48;
         margin-top: 2.5%;
     }
 
