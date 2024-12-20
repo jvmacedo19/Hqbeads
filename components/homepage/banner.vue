@@ -118,15 +118,10 @@ export default {
                                     }
                                 }
 
-                                input {
-                                    border: 1px solid #695641;
-                                    padding: 11px;
-
-                                    @media screen {
-                                        @media (max-width: 800px) {
-                                            margin-bottom: 10px;
-                                        }
-                                    }
+                                ::v-deep(.v-field--variant-solo, .v-field--variant-solo-filled) {
+                                    box-shadow: none;
+                                    border: 1px solid #ccc;
+                                    
                                 }
                             }
 
@@ -154,8 +149,9 @@ export default {
             }
         }
     }
+
     ::v-deep .v-input__details {
-                                    display: none;
-                                }
+        display: none;
+    }
 }
 </style>

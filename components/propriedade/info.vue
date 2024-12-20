@@ -7,42 +7,51 @@
             <div class='about'>
                 <div class="solucoes1">
                     <div class='aboutarea'>
-                        <div class="circulo"></div>
+                        <div class="circulo">
+                            <v-icon color="#6c563f" size="40">mdi-door-closed-lock</v-icon>
+                        </div>
                         <div class='text'>
-                            <h2 >Cancelamento grátis</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut
+                            <h2>Cancelamento grátis</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas erat nisi, ut
                                 ornare lorem sagittis sed. </p>
                         </div>
                     </div>
                     <div class='aboutarea'>
-                        <div class="circulo"></div>
+                        <div class="circulo">
+                            <v-icon color="#6c563f" size="40">mdi-cash-lock</v-icon>
+                        </div>
                         <div class='text'>
-                            <h2 >Pagamento seguro</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut
+                            <h2>Pagamento seguro</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas erat nisi, ut
                                 ornare lorem sagittis sed. </p>
                         </div>
                     </div>
                 </div>
                 <div class="solucoes2">
                     <div class='aboutarea'>
-                        <div class="circulo"></div>
+                        <div class="circulo">
+                            <v-icon color="#6c563f" size="40">mdi-coffee</v-icon>
+                        </div>
                         <div class='text'>
-                            <h2 >Café da manhã incluso</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut
+                            <h2>Café da manhã incluso</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas erat nisi, ut
                                 ornare lorem sagittis sed. </p>
                         </div>
                     </div>
                     <div class='aboutarea'>
-                        <div class="circulo"></div>
+                        <div class="circulo">
+                            <v-icon color="#6c563f" size="40">mdi-map-marker</v-icon>
+                        </div>
                         <div class='text'>
-                            <h2 >Melhor localização</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut
+                            <h2>Melhor localização</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas erat nisi, ut
                                 ornare lorem sagittis sed. </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <HQButton style="padding: 2.5% 0;display: flex; justify-content: center; align-items: center; " valor="Reserve já"></HQButton>
+            <HQButton style="padding: 2.5% 0;display: flex; justify-content: center; align-items: center; "
+                valor="Reserve já"></HQButton>
         </div>
     </div>
 </template>
@@ -67,12 +76,20 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
 
+    @media(max-width:800px) {
+        padding:15% 10%;
+    }
+
     .info-texto {
         text-align: center;
 
         h2 {
             font-size: 48px;
             margin-bottom: 30px;
+
+            @media(max-width:800px) {
+                font-size: 36px;
+            }
         }
 
         p {
@@ -82,7 +99,6 @@ export default {
     }
 
     #about-solucoes {
-        padding: 60px 5% 5% 5%;
 
         @media(max-width:800px) {
             margin: auto;
@@ -102,7 +118,7 @@ export default {
                 align-items: center;
                 flex: 1;
                 border-radius: 10px;
-                margin: 0 0 40px 40px;
+                margin: 0 0 40px 0;
                 gap: 20px;
 
                 @media (min-width: 801px) and (max-width: 1440px) {
@@ -111,15 +127,21 @@ export default {
 
                 @media(max-width:800px) {
                     margin-left: 0;
-                    padding: 20px;
-                    margin-bottom: 5%;
+                    text-align: center;
                 }
 
-                .circulo{
-                    height: 75px;
+                .circulo {
+                    height: 90px;
                     width: 125px;
                     background-color: #ccc;
                     border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    @media (max-width: 801px) {
+                        display: none;
+                    }
                 }
 
                 .image1 {

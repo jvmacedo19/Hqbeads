@@ -71,6 +71,7 @@ export default {
                justify-content: center;
                align-items: center;
                text-align: center;
+               padding: 2.5% 2.5% 10% 2.5%;
             }
         }
 

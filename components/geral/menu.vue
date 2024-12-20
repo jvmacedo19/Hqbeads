@@ -22,28 +22,33 @@
             </div>
             <div class="menu-svg">
                 <a href="">
-                    <v-icon color="white" style="width: 20px; margin-right: 10px;">mdi-instagram</v-icon>
+                    <v-icon color="white" style="width: 20px; margin-right: 10px;text-decoration: none;">mdi-instagram</v-icon>
                 </a>
                 <a href="">
-                    <v-icon color="white" style="width: 20px; margin-right: 10px;">mdi-facebook</v-icon>
+                    <v-icon color="white" style="width: 20px; margin-right: 10px;text-decoration: none;">mdi-facebook</v-icon>
                 </a>
                 <a href="">
-                    <v-icon color="white" style="width: 20px; margin-right: 10px;">mdi-pinterest</v-icon>
+                    <v-icon color="white" style="width: 20px; margin-right: 10px;text-decoration: none;">mdi-pinterest</v-icon>
                 </a>
             </div>
         </div>
         <!-- Mobile Menu -->
         <div class="mobile-menu">
-            <button @click="toggleMenu" class="menu-button">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
+            <button @click="toggleMenu" class="menu-button" >
+                <div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+                <img src="public/assets/homepage/hqbeds_logo_1 2.webp" style="height: 30px;">
             </button>
             <div v-if="menuOpen" class="mobile-links">
-                <a href="/sobre-nos" class="menu-item">Home</a>
-                <a href="#" class="menu-item">Sobre a propriedade</a>
-                <a href="/blog" class="menu-item">Acomodações</a>
-                <a href="/contato" class="menu-item">Atrações</a>
+                <a href="/" class="menu-item">Home</a>
+                <a href="/propriedade" class="menu-item">Sobre a propriedade</a>
+                <a href="/acomodacoes" class="menu-item">Acomodações</a>
+                <a href="/atracoes" class="menu-item">Atrações</a>
+                <a href="/galeria" class="menu-item">Galeria</a>
+                <a href="/reserva" class="menu-item">Reserva</a>
             </div>
         </div>
 
@@ -178,9 +183,15 @@ export default {
             flex-direction: column;
             align-items: flex-start;
             padding: 10px;
-            background: #000;
+            background: #6C563F;
 
             .menu-button {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                /* Para alinhar verticalmente os elementos */
+                width: 100%;
+                /* Certifique-se de que a largura seja suficiente */
                 background: none;
                 border: none;
                 cursor: pointer;
@@ -192,7 +203,13 @@ export default {
                     background: #fff;
                     margin: 5px 0;
                 }
+
+                img {
+                    height: 30px;
+                    /* Certifique-se de que a imagem tenha dimensões */
+                }
             }
+
 
             .mobile-links {
                 display: flex;

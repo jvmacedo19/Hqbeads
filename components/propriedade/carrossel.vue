@@ -14,7 +14,7 @@
                 </v-carousel-item>
             </v-carousel>
         </div>
-        <HQButton style="padding: 2.5% 0;" valor="Reserve já"></HQButton>
+        <HQButton style="padding: 2.5% 0; margin-top: 2.5%; margin-bottom: 2.5%;" valor="Reserve já"></HQButton>
     </div>
 </template>
 
@@ -60,10 +60,15 @@ export default {
         text-align: center;
         margin-bottom: 30px;
         font-size: 48px;
+
+        @media (max-width: 800px) {
+            margin-bottom: 2.5%;
+        }
     }
 
     .avaliacao {
         display: contents;
+        
 
         .texto {
             font-family: "Montserrat", sans-serif;
@@ -76,6 +81,7 @@ export default {
         .v-btn--variant-elevated {
             box-shadow: none;
             background: none;
+            margin-top: 2.5%;
         }
     }
 
