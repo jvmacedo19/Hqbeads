@@ -4,19 +4,14 @@
             <div class='modelo-item2'>
                 <div class="carossel-container">
                     <v-carousel delimiter-icon="mdi-minus" height="40vh" :show-arrows="false" cycle>
-                        <v-carousel-item src="public/assets/acomodacoes/image-4.webp" cover></v-carousel-item>
-                        <v-carousel-item src="public/assets/acomodacoes/image-4.webp" cover></v-carousel-item>
-                        <v-carousel-item src="public/assets/acomodacoes/image-4.webp"
-                            cover></v-carousel-item>
+                        <v-carousel-item v-for="(img, i) in gallery" :key="i" :src="img" cover></v-carousel-item>
                     </v-carousel>
                 </div>
             </div>
             <div class='modelo-item1'>
-                <h2>Modelo número 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem
-                    sagittis sed. Sed at mi ac odio luctus imperdiet nec at nisi. Mauris scelerisque lorem et volutpat
-                    scelerisque ultrices.</p>
-                <p style="font-weight: 500;">capacidade: 3 pessoas</p>
+                <h2>{{ title }}</h2>
+                <p>{{ description }}</p>
+                <p style="font-weight: 500;">Capacidade: {{ number }}</p>
                 <HQButton valor="Reserve já"></HQButton>
             </div>
         </div>
@@ -29,11 +24,15 @@ import HQButton from "@/components/geral/button.vue"
 
 
 export default {
+    props: {
+        title: String,
+        description: String,
+        number: String,
+        gallery: Array
+    },
     components: {
-        HQButton,
+        HQButton
     }
-
-
 };
 
 </script>

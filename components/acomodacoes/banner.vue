@@ -1,13 +1,13 @@
 <template>
-    <div id="acomodacoes-banner">
+    <div id="acomodacoes-banner" :style="{background: background}">
         <div class="acomodacoes-principal">
             <div class='banner'>
                 <div class='list'>
                     <div class='item'>
                         <div class='content'>
                             <div class='text'>
-                                <h1>Nossas acomodações</h1>
-                                <h2>Saiba mais sobre as acomodacoes!</h2>
+                                <h1>{{ title }}</h1>
+                                <h2>{{ subtitle }}</h2>
                             </div>
                         </div>
                     </div>
@@ -23,6 +23,11 @@ import HQButton from '@/components/geral/button.vue';
 
 export default {
     name: 'AcomodacoesBanner',
+    props: {
+        title: String,
+        subtitle: String,
+        background: String
+    },
     components: {
         HQButton
     }
@@ -32,17 +37,6 @@ export default {
 
 <style lang="scss" scoped>
 #acomodacoes-banner {
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-image: url("public/assets/acomodacoes/image 2.webp");
-    background-position: center;
-
-    @media screen {
-        @media (max-width: 800px) {
-            background-position: center;
-        }
-    }
-
     .acomodacoes-principal {
         .banner {
             height: 100vh;

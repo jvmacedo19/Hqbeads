@@ -1,0 +1,30 @@
+query AcomodacoesLanding {
+  pageBy(uri: "acomodacoes") {
+    camposAcomodacoes {
+      titulo
+      subtitulo
+      imagemDeFundo {
+        node {
+          sourceUrl
+        }
+      }
+    }
+  }
+}
+
+query AcomodacoesRooms {
+  pageBy(uri: "acomodacoes") {
+    camposAcomodacoes {
+      acomodacoes {
+        capacidade
+        descricao
+        titulo
+        galeria {
+          nodes {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}
