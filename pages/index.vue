@@ -13,10 +13,6 @@
 
 import HQMenu from "@/components/geral/menu.vue"
 import HQFooter from "@/components/geral/footer.vue"
-import { ref } from 'vue';
-
-export const metaTitle = ref('');
-export const metaDescription = ref('');
 
 export default {
     name: 'homepage',
@@ -121,9 +117,6 @@ export default {
         this.location.title = query.pageBy?.camposHomePage?.localizacao?.titulo;
         this.location.description = query.pageBy?.camposHomePage?.localizacao?.descricao;
         this.location.link = query.pageBy?.camposHomePage?.localizacao?.linkDoMapa;
-
-        metaTitle.value = 'Título da página';
-        metaDescription.value = 'Descrição da página';
     }
 }
 </script>
@@ -133,6 +126,13 @@ export default {
 
     async function setupPage() {
         const props = await GqlHomePageSEO({ slug: "home-page" });
+
+        useHead({
+            title: props.pageBy?.seo?.title,
+            meta: [
+                { name: 'robots', content: robots }
+            ]
+        })
 
         useSeoMeta({
             title: props.pageBy?.seo?.title,
@@ -149,12 +149,6 @@ export default {
     }
 
     setupPage();
-
-    useHead({
-        meta: [
-            { name: 'robots', content: robots }
-        ]
-    })
 </script>
 
 <style></style>
