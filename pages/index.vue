@@ -124,31 +124,30 @@ export default {
 <script setup lang="ts">
     const robots = process.env.ROBOTS;
 
-    async function setupPage() {
-        const props = await GqlHomePageSEO({ slug: "home-page" });
-
-        useHead({
-            title: props.pageBy?.seo?.title,
-            meta: [
-                { name: 'robots', content: robots }
-            ]
-        })
-
-        useSeoMeta({
-            title: props.pageBy?.seo?.title,
-            ogTitle: props.pageBy?.seo?.title,
-            description: props.pageBy?.seo?.metaDesc,
-            ogDescription: props.pageBy?.seo?.metaDesc,
-            ogImage: props.pageBy?.featuredImage?.node.sourceUrl,
-            ogType: 'website',
-            twitterCard: 'summary_large_image',
-            twitterTitle: props.pageBy?.seo?.title,
-            twitterDescription: props.pageBy?.seo?.metaDesc,
-            twitterImage: props.pageBy?.featuredImage?.node.sourceUrl
-        })
+    const seo = {
+        title: 'HQSites - Template de site #1',
+        description: 'Navegue pelo nosso template, pensado exclusivamente para impulsionar o desempenho da sua pousada!',
+        image: 'https://olive-wren-636935.hostingersite.com/wp-content/uploads/2024/12/image-1.webp'
     }
 
-    setupPage();
+    useHead({
+        meta: [
+            { name: 'robots', content: robots }
+        ]
+    })
+
+    useSeoMeta({
+        title: seo.title,
+        ogTitle: seo.title,
+        description: seo.description,
+        ogDescription: seo.description,
+        ogImage: seo.image,
+        ogType: 'website',
+        twitterCard: 'summary_large_image',
+        twitterTitle: seo.title,
+        twitterDescription: seo.description,
+        twitterImage: seo.image
+    })
 </script>
 
 <style></style>
