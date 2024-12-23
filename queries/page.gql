@@ -92,5 +92,10 @@ query HomePageSEO($slug: String!) {
       title
       metaDesc
     }
+    featuredImage {
+      node {
+        sourceUrl
+      }
+    }
   }
 }

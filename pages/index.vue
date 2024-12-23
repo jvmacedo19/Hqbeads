@@ -139,12 +139,12 @@ export default {
             ogTitle: props.pageBy?.seo?.title,
             description: props.pageBy?.seo?.metaDesc,
             ogDescription: props.pageBy?.seo?.metaDesc,
-            ogImage: '',
+            ogImage: props.pageBy?.featuredImage?.node.sourceUrl,
             ogType: 'website',
             twitterCard: 'summary_large_image',
             twitterTitle: props.pageBy?.seo?.title,
             twitterDescription: props.pageBy?.seo?.metaDesc,
-            twitterImage: ''
+            twitterImage: props.pageBy?.featuredImage?.node.sourceUrl
         })
     }
 
