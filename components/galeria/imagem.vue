@@ -31,7 +31,7 @@
             <h2 style="text-align: center; font-size: 48px;">Galeria:</h2>
 
             <div class="carossel-container">
-                <v-carousel delimiter-icon="mdi-minus" height="40vh" :show-arrows="false">
+                <v-carousel delimiter-icon="mdi-minus" height="40vh" :show-arrows="false" cycle>
                     <v-carousel-item src="public/assets/atracoes/Group 37.webp" cover></v-carousel-item>
                     <v-carousel-item src="public/assets/atracoes/Group 37-2.webp" cover></v-carousel-item>
                     <v-carousel-item src="public/assets/atracoes/Group 37-1.webp" cover></v-carousel-item>

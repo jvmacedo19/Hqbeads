@@ -7,7 +7,7 @@
             </div>
             <div class='modelo-item2'>
                 <div class="carossel-container">
-                    <v-carousel delimiter-icon="mdi-minus" height="40vh" :show-arrows="false">
+                    <v-carousel delimiter-icon="mdi-minus" height="40vh" :show-arrows="false" cycle>
                         <v-carousel-item v-for="(image, i) in images" :key="i" :src="image" cover></v-carousel-item>
                     </v-carousel>
                 </div>
