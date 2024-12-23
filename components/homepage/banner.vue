@@ -1,5 +1,5 @@
 <template>
-    <div id="homepage-banner">
+    <div id="homepage-banner" :style="{background: background}">
         <div class="homepage-principal">
             <div class='banner'>
                 <div class='list'>
@@ -31,7 +31,8 @@ export default {
     name: 'HomepageBanner',
     props: {
         title: String,
-        subtitle: String
+        subtitle: String,
+        background: String
     },
     components: {
         HQButton
@@ -42,16 +43,6 @@ export default {
 
 <style lang="scss" scoped>
 #homepage-banner {
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("public/assets/homepage/image 1.webp");
-
-    @media screen {
-        @media (max-width: 800px) {
-            background-position: center;
-        }
-    }
-
     .homepage-principal {
         .banner {
             height: 100vh;

@@ -1,0 +1,9 @@
+query Testimonials {
+  metadadoBy(uri: "depoimentos") {
+    depoimentos {
+      depoimentos {
+        depoimento
+      }
+    }
+  }
+}

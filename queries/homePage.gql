@@ -1,0 +1,125 @@
+query HomePageLanding {
+  pageBy(uri: "home-page") {
+    camposHomePage {
+      fraseDeAterrissagem
+      subtituloDeAterrissagem
+      fundoDeAterrissagem {
+        node {
+          sourceUrl
+        }
+      }
+    }
+  }
+}
+
+query HomePageInfos {
+  pageBy(uri: "home-page") {
+    camposHomePage {
+      descricaoSegundaDobra
+      tituloSegundaDobra
+      card1 {
+        descricao
+        icone
+        titulo
+        imagemDeFundo {
+          node {
+            sourceUrl
+          }
+        }
+      }
+      card2 {
+        descricao
+        icone
+        titulo
+        imagemDeFundo {
+          node {
+            sourceUrl
+          }
+        }
+      }
+      card3 {
+        descricao
+        icone
+        titulo
+        imagemDeFundo {
+          node {
+            sourceUrl
+          }
+        }
+      }
+      card4 {
+        descricao
+        icone
+        titulo
+        imagemDeFundo {
+          node {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}
+
+query HomePageCallToActions {
+  pageBy(uri: "home-page") {
+    title
+    camposHomePage {
+      callToActions {
+        acomodacoes {
+          node {
+            sourceUrl
+          }
+        }
+        atracoes {
+          node {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}
+
+query HomePageGallery {
+  pageBy(uri: "home-page") {
+    camposHomePage {
+      galeria {
+        descricao
+        titulo
+        imagemEmDestaque {
+          node {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}
+
+query HomePageLocation {
+  pageBy(uri: "home-page") {
+    title
+    camposHomePage {
+      localizacao {
+        descricao
+        linkDoMapa
+        titulo
+      }
+    }
+  }
+}
+
+query HomePageSEO {
+  pageBy(uri: "home-page") {
+    seo {
+      title
+      metaDesc
+    }
+    featuredImage {
+      node {
+        sourceUrl
+      }
+    }
+  }
+}
