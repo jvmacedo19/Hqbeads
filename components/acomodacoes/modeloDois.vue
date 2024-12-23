@@ -16,7 +16,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem
                     sagittis sed. Sed at mi ac odio luctus imperdiet nec at nisi. Mauris scelerisque lorem et volutpat
                     scelerisque ultrices.</p>
-                <p style="font-weight: 500;">capacidade: 3 pessoas</p>
+                <p style="font-weight: 500;">Capacidade: 3 pessoas</p>
                 <HQButton valor="Reserve já"></HQButton>
             </div>
         </div>

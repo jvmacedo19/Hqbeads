@@ -202,6 +202,11 @@ export default {
             text-align: center;
             margin-bottom: 5%;
             width: 35%;
+            @media screen {
+            @media (max-width: 800px) {
+                width: 100%;
+            }
+        }
         }
     }
 }

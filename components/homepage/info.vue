@@ -85,6 +85,11 @@ export default {
         h2 {
             font-size: 48px;
             margin-bottom: 5%;
+            @media screen {
+            @media (max-width: 800px) {
+               font-size: 40px;
+            }
+        }
         }
 
         p {
