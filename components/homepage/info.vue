@@ -107,6 +107,14 @@ export default {
                 flex-direction: column;
             }
 
+            .solucoes1 {
+                .aboutarea {
+                    @media(min-width:800px) {
+                        margin-left:0px !important;
+                    }
+                }
+            }
+
             .aboutarea {
                 display: flex;
                 flex-direction: column;
