@@ -13,6 +13,10 @@
 
 import HQMenu from "@/components/geral/menu.vue"
 import HQFooter from "@/components/geral/footer.vue"
+import { ref } from 'vue';
+
+export const metaTitle = ref('');
+export const metaDescription = ref('');
 
 export default {
     name: 'homepage',
@@ -117,8 +121,40 @@ export default {
         this.location.title = query.pageBy?.camposHomePage?.localizacao?.titulo;
         this.location.description = query.pageBy?.camposHomePage?.localizacao?.descricao;
         this.location.link = query.pageBy?.camposHomePage?.localizacao?.linkDoMapa;
+
+        metaTitle.value = 'Título da página';
+        metaDescription.value = 'Descrição da página';
     }
 }
+</script>
+
+<script setup lang="ts">
+    const robots = process.env.ROBOTS;
+
+    async function setupPage() {
+        const props = await GqlHomePageSEO({ slug: "home-page" });
+
+        useSeoMeta({
+            title: props.pageBy?.seo?.title,
+            ogTitle: props.pageBy?.seo?.title,
+            description: props.pageBy?.seo?.metaDesc,
+            ogDescription: props.pageBy?.seo?.metaDesc,
+            ogImage: '',
+            ogType: 'website',
+            twitterCard: 'summary_large_image',
+            twitterTitle: props.pageBy?.seo?.title,
+            twitterDescription: props.pageBy?.seo?.metaDesc,
+            twitterImage: ''
+        })
+    }
+
+    setupPage();
+
+    useHead({
+        meta: [
+            { name: 'robots', content: robots }
+        ]
+    })
 </script>
 
 <style></style>

@@ -85,3 +85,12 @@ query HomePage($slug: String!) {
     }
   }
 }
+
+query HomePageSEO($slug: String!) {
+  pageBy(uri: $slug) {
+    seo {
+      title
+      metaDesc
+    }
+  }
+}
