@@ -4,3 +4,84 @@ query Page($slug: String!) {
     title
   }
 }
+
+query HomePage($slug: String!) {
+  pageBy(uri: $slug) {
+    title
+    camposHomePage {
+      descricaoSegundaDobra
+      fraseDeAterrissagem
+      subtituloDeAterrissagem
+      tituloSegundaDobra
+      card1 {
+        descricao
+        icone
+        titulo
+        imagemDeFundo {
+          node {
+            sourceUrl
+          }
+        }
+      }
+      card2 {
+        descricao
+        icone
+        titulo
+        imagemDeFundo {
+          node {
+            sourceUrl
+          }
+        }
+      }
+      card3 {
+        descricao
+        icone
+        titulo
+        imagemDeFundo {
+          node {
+            sourceUrl
+          }
+        }
+      }
+      card4 {
+        descricao
+        icone
+        titulo
+        imagemDeFundo {
+          node {
+            sourceUrl
+          }
+        }
+      }
+      callToActions {
+        acomodacoes {
+          node {
+            sourceUrl
+          }
+        }
+        atracoes {
+          node {
+            sourceUrl
+          }
+        }
+      }
+      depoimentos {
+        depoimento
+      }
+      galeria {
+        descricao
+        titulo
+        imagemEmDestaque {
+          node {
+            sourceUrl
+          }
+        }
+      }
+      localizacao {
+        descricao
+        linkDoMapa
+        titulo
+      }
+    }
+  }
+}

@@ -6,8 +6,8 @@
                     <div class='item'>
                         <div class='content'>
                             <div class='text'>
-                                <h1>Uma frase muito interessante</h1>
-                                <h2>Algo muito bacana vai acontecer aqui</h2>
+                                <h1>{{ title }}</h1>
+                                <h2>{{ subtitle }}</h2>
                                 <div class="reserva">
                                     <v-text-field label="Check-in" type="date" variant="solo"></v-text-field>
                                     <v-text-field label="Check-out" type="date" variant="solo"></v-text-field>
@@ -29,6 +29,10 @@ import HQButton from '@/components/geral/button.vue';
 
 export default {
     name: 'HomepageBanner',
+    props: {
+        title: String,
+        subtitle: String
+    },
     components: {
         HQButton
     }

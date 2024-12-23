@@ -1,56 +1,41 @@
 <template>
     <div id="HQ-info">
         <div class="info-texto">
-            <h2>Sua aventura começa aqui</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem
-                sagittis sed. Sed at mi ac odio luctus imperdiet nec at nisi. Mauris scelerisque lorem et volutpat
-                ultrices.
-                Vivamus placerat ultricies felis, sed mattis nulla maximus gravida. Quisque turpis ipsum, ultrices vel
-                justo
-                et, scelerisque vulputate risus. Nam sodales, diam ut fringilla cursus, nibh lacus feugiat leo, vitae
-                varius
-                sapien sapien ut felis. Phasellus ut augue non augue finibus fermentum sit amet ut justo.</p>
+            <h2>{{ title }}</h2>
+            <p>{{ description }}</p>
             <h2>Reserve já</h2>
         </div>
         <div id="about-solucoes">
             <div class='about'>
                 <div class="solucoes1">
-                    <div class='aboutarea'
-                        style="background: #6c563f;background-size: cover;background-repeat: no-repeat; ">
-                        <v-icon size="75" >mdi-compass</v-icon>
+                    <div class='aboutarea' :style="{background: cards[0].background}">
+                        <v-icon size="75" >{{ cards[0].icon }}</v-icon>
                         <div class='text'>
-                            <h2 style="color: #fff;">Programações</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut
-                                ornare lorem sagittis sed. </p>
+                            <h2 style="color: #fff;">{{ cards[0].title }}</h2>
+                            <p>{{ cards[0].description }}</p>
                         </div>
                     </div>
-                    <div class='aboutarea'
-                        style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/homepage/image.webp');background-size: cover;background-repeat: no-repeat; ">
-                        <v-icon size="75" >mdi-television</v-icon>
+                    <div class='aboutarea' :style="{background: cards[1].background}">
+                        <v-icon size="75" >{{ cards[1].icon }}</v-icon>
                         <div class='text'>
-                            <h2 style="color: #fff;">TV e filmes</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut
-                                ornare lorem sagittis sed. </p>
+                            <h2 style="color: #fff;">{{ cards[1].title }}</h2>
+                            <p>{{ cards[1].description }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="solucoes2">
-                    <div class='aboutarea'
-                        style="background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('assets/homepage/image 6.webp');background-size: cover;background-repeat: no-repeat; ">
-                        <v-icon size="75">mdi-television</v-icon>
+                    <div class='aboutarea' :style="{background: cards[2].background}">
+                        <v-icon size="75">{{ cards[2].icon }}</v-icon>
                         <div class='text'>
-                            <h2 style="color: #fff;">Café da manhã</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut
-                                ornare lorem sagittis sed. </p>
+                            <h2 style="color: #fff;">{{ cards[2].title }}</h2>
+                            <p>{{ cards[2].description }}</p>
                         </div>
                     </div>
-                    <div class='aboutarea'
-                        style="background: #6c563f;background-size: cover;background-repeat: no-repeat; ">
-                        <v-icon size="75" >mdi-currency-usd</v-icon>
+                    <div class='aboutarea' :style="{background: cards[3].background}">
+                        <v-icon size="75">{{ cards[3].icon }}</v-icon>
                         <div class='text'>
-                            <h2 style="color: #fff;">Melhor preço garantido</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut
-                                ornare lorem sagittis sed. </p>
+                            <h2 style="color: #fff;">{{ cards[3].title }}</h2>
+                            <p>{{ cards[3].description }}</p>
                         </div>
                     </div>
                 </div>
@@ -65,6 +50,11 @@ import HQButton from '@/components/geral/button.vue';
 
 export default {
     name: 'HomepageInfo',
+    props: {
+        title: String,
+        description: String,
+        cards: Array
+    },
     components: {
         HQButton
     }
@@ -111,6 +101,19 @@ export default {
                 .aboutarea {
                     @media(min-width:800px) {
                         margin-left:0px !important;
+                    }
+                }
+            }
+
+            .solucoes1,
+            .solucoes2 {
+                @media screen {
+                    @media (max-width:800px) {
+                        width:100%;
+                    }
+
+                    @media (min-width:800px) {
+                        width:50%;
                     }
                 }
             }

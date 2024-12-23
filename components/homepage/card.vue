@@ -1,11 +1,11 @@
 <template>
     <div class='empreendimento'>
         <div class='empreedimentoimage'>
-            <div class='empreendimentoitem1'>
+            <div class='empreendimentoitem1' :style="{background: ctas.atracoes}">
                 <p>Atrações</p>
                 <HQButton valor="Reserve já"></HQButton>
             </div>
-            <div class='empreendimentoitem2'>
+            <div class='empreendimentoitem2' :style="{background: ctas.acomodacoes}">
                 <p>Acomodações</p>
                 <HQButton valor="Reserve já"></HQButton>
             </div>
@@ -20,6 +20,9 @@ import HQButton from "@/components/geral/button.vue"
 
 export default {
     name: 'HomepageCard',
+    props: {
+        ctas: Object
+    },
     components: {
         HQButton,
     }
@@ -65,9 +68,6 @@ export default {
 
         .empreendimentoitem1 {
             flex: 1;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("public/assets/homepage/image 3.webp");
-            background-size: cover;
-            background-repeat: no-repeat;
             height: 80vh;
             padding: 5%;
             display: flex;
@@ -108,9 +108,6 @@ export default {
 
         .empreendimentoitem2 {
             flex: 1;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("public/assets/homepage/image 2.webp");
-            background-size: cover;
-            background-repeat: no-repeat;
             height: 80vh;
             padding: 5%;
             display: flex;
