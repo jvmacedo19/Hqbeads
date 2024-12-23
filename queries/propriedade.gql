@@ -1,0 +1,93 @@
+query PropriedadeLanding {
+  pageBy(uri: "propriedade") {
+    camposPropriedade {
+      aterrissagem {
+        titulo
+        subtitulo
+        imagemDeFundo {
+          node {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}
+
+query PropriedadeAbout {
+  pageBy(uri: "propriedade") {
+    camposPropriedade {
+      sobreNos {
+        descricao
+        titulo
+        imagem {
+          node {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}
+
+query PropriedadeBenefits {
+  pageBy(uri: "propriedade") {
+    camposPropriedade {
+      beneficios {
+        titulo
+        beneficio1 {
+          descricao
+          icone
+          titulo
+        }
+        beneficio2 {
+          descricao
+          icone
+          titulo
+        }
+        beneficio3 {
+          descricao
+          icone
+          titulo
+        }
+        beneficio4 {
+          descricao
+          icone
+          titulo
+        }
+      }
+    }
+  }
+}
+
+query PropriedadeGallery {
+  pageBy(uri: "propriedade") {
+    camposPropriedade {
+      areasComuns {
+        titulo
+        descricao
+        imagem {
+          nodes {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}
+
+query PropriedadeNeighbourhood {
+  pageBy(uri: "propriedade") {
+    camposPropriedade {
+      vizinhanca {
+        titulo
+        descricao
+        imagem {
+          node {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}

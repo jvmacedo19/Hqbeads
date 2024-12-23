@@ -1,51 +1,47 @@
 <template>
     <div id="propriedade-info">
         <div class="info-texto">
-            <h2>Por que escolher a gente?</h2>
+            <h2>{{ title }}</h2>
         </div>
         <div id="about-solucoes">
             <div class='about'>
                 <div class="solucoes1">
                     <div class='aboutarea'>
                         <div class="circulo">
-                            <v-icon color="#6c563f" size="40">mdi-door-closed-lock</v-icon>
+                            <v-icon color="#6c563f" size="40">{{ benefits[0].icon }}</v-icon>
                         </div>
                         <div class='text'>
-                            <h2>Cancelamento grátis</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas erat nisi, ut
-                                ornare lorem sagittis sed. </p>
+                            <h2>{{ benefits[0].title }}</h2>
+                            <p>{{ benefits[0].description }}</p>
                         </div>
                     </div>
                     <div class='aboutarea'>
                         <div class="circulo">
-                            <v-icon color="#6c563f" size="40">mdi-cash-lock</v-icon>
+                            <v-icon color="#6c563f" size="40">{{ benefits[1].icon }}</v-icon>
                         </div>
                         <div class='text'>
-                            <h2>Pagamento seguro</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas erat nisi, ut
-                                ornare lorem sagittis sed. </p>
+                            <h2>{{ benefits[1].title }}</h2>
+                            <p>{{ benefits[1].description }}</p>
                         </div>
                     </div>
                 </div>
                 <div class="solucoes2">
                     <div class='aboutarea'>
                         <div class="circulo">
-                            <v-icon color="#6c563f" size="40">mdi-coffee</v-icon>
+                            <v-icon color="#6c563f" size="40">{{ benefits[2].icon }}</v-icon>
                         </div>
                         <div class='text'>
-                            <h2>Café da manhã incluso</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas erat nisi, ut
-                                ornare lorem sagittis sed. </p>
+                            <h2>{{ benefits[2].title }}</h2>
+                            <p>{{ benefits[2].description }}</p>
                         </div>
                     </div>
                     <div class='aboutarea'>
                         <div class="circulo">
-                            <v-icon color="#6c563f" size="40">mdi-map-marker</v-icon>
+                            <v-icon color="#6c563f" size="40">{{ benefits[3].icon }}</v-icon>
                         </div>
                         <div class='text'>
-                            <h2>Melhor localização</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas erat nisi, ut
-                                ornare lorem sagittis sed. </p>
+                            <h2>{{ benefits[3].title }}</h2>
+                            <p>{{ benefits[3].description }}</p>
                         </div>
                     </div>
                 </div>
@@ -62,6 +58,10 @@ import HQButton from '@/components/geral/button.vue';
 
 export default {
     name: 'HomepageInfo',
+    props: {
+        title: String,
+        benefits: Array
+    },
     components: {
         HQButton
     }

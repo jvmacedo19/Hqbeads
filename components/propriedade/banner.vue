@@ -1,13 +1,13 @@
 <template>
-    <div id="proprieade-banner">
+    <div id="proprieade-banner" :style="{background: background}">
         <div class="proprieade-principal">
             <div class='banner'>
                 <div class='list'>
                     <div class='item'>
                         <div class='content'>
                             <div class='text'>
-                                <h1>Algo sobre a propriedade</h1>
-                                <h2>Saiba mais sobre a propriedade!</h2>
+                                <h1>{{ title }}</h1>
+                                <h2>{{ subtitle }}</h2>
                             </div>
                         </div>
                     </div>
@@ -23,6 +23,11 @@ import HQButton from '@/components/geral/button.vue';
 
 export default {
     name: 'ProprieadeBanner',
+    props: {
+        title: String,
+        subtitle: String,
+        background: String
+    },
     components: {
         HQButton
     }
@@ -32,17 +37,6 @@ export default {
 
 <style lang="scss" scoped>
 #proprieade-banner {
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.25)), url('public/assets/propriedade/image 7.webp');
-    background-position: center;
-
-    @media screen {
-        @media (max-width: 800px) {
-            background-position: center;
-        }
-    }
-
     .proprieade-principal {
         .banner {
             height: 100vh;

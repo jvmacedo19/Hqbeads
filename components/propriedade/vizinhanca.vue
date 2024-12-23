@@ -1,17 +1,11 @@
 <template>
     <div id='vizinhanca-propriedade'>
         <div class="texto">
-            <h2>Conheça a vizinhanca</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem
-                sagittis sed. Sed at mi ac odio luctus imperdiet nec at nisi. Mauris scelerisque lorem et volutpat
-                scelerisque ultrices.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem
-                sagittis sed. Sed at mi ac odio luctus imperdiet nec at nisi. Mauris scelerisque lorem et volutpat
-                scelerisque ultrices.</p>
+            <h2>{{ title }}</h2>
+            <p>{{ description }}</p>
             <HQButton valor="Reserve já"></HQButton>
         </div>
-        <div class="background">
-
-        </div>
+        <div class="background" :style="{backgroundImage: image}"></div>
     </div>
 </template>
 
@@ -21,11 +15,14 @@ import HQButton from "@/components/geral/button.vue"
 
 
 export default {
+    props: {
+        title: String,
+        description: String,
+        image: String
+    },
     components: {
-        HQButton,
+        HQButton
     }
-
-
 };
 
 </script>
@@ -44,7 +41,6 @@ export default {
 
     .background {
         flex: 1;
-        background-image: url("public/assets/propriedade/image-2.webp");
         background-repeat: no-repeat;
         background-size: cover;
         height: 100%;

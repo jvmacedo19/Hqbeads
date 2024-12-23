@@ -3,8 +3,8 @@
         <h2>O que nossos hóspedes dizem</h2>
         <div class="avaliacao">
             <v-carousel height="400" cycle hide-delimiters>
-                <v-carousel-item v-for="(slide, i) in slides" :key="i">
-                    <v-sheet :color="colors[i]" height="100%">
+                <v-carousel-item v-for="(slide, i) in testimonials" :key="i">
+                    <v-sheet color="#f7ebda" height="100%">
                         <div class="d-flex fill-height justify-center align-center">
                             <div class="texto">
                                 {{ slide }}
@@ -24,19 +24,11 @@ import HQButton from "@/components/geral/button.vue"
 
 export default {
     name: "PropriedadeCarrossel",
+    props: {
+        testimonials: Array
+    },
     data() {
-        return {
-            colors: [
-                "#f7ebda",
-                "#f7ebda",
-                "#f7ebda",
-            ],
-            slides: [
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem',
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem',
-                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem, Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem',
-            ],
-        }
+        return {}
     },
     components: {
         HQButton,
