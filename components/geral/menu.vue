@@ -21,13 +21,13 @@
                 <a href="/reserva" class="menu-item">Reserva</a>
             </div>
             <div class="menu-svg">
-                <a href="">
+                <a v-if="socials.instagram" :href="socials.instagram">
                     <v-icon color="white" style="width: 20px; margin-right: 10px;text-decoration: none;">mdi-instagram</v-icon>
                 </a>
-                <a href="">
+                <a v-if="socials.facebook" :href="socials.facebook">
                     <v-icon color="white" style="width: 20px; margin-right: 10px;text-decoration: none;">mdi-facebook</v-icon>
                 </a>
-                <a href="">
+                <a v-if="socials.pinterest" :href="socials.pinterest">
                     <v-icon color="white" style="width: 20px; margin-right: 10px;text-decoration: none;">mdi-pinterest</v-icon>
                 </a>
             </div>
@@ -61,13 +61,28 @@ export default {
     data() {
         return {
             menuOpen: false,
+            socials: {
+                facebook:null,
+                instagram:null,
+                pinterest:null
+            }
         };
     },
     methods: {
         toggleMenu() {
             this.menuOpen = !this.menuOpen;
         },
+        async consultSocials() {
+            const query = await GqlSocials();
+
+            this.socials.facebook = query.metadadoBy.linksDeRedesSociais.facebook;
+            this.socials.instagram = query.metadadoBy.linksDeRedesSociais.instagram;
+            this.socials.pinterest = query.metadadoBy.linksDeRedesSociais.pinterest;
+        }
     },
+    async mounted() {
+        this.consultSocials();
+    }
 };
 </script>
 
@@ -143,6 +158,10 @@ export default {
 
         .menu-svg {
             display: flex;
+
+            a {
+                text-decoration: none;
+            }
 
             .svg-image1 {
                 display: flex;

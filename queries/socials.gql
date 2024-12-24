@@ -1,0 +1,9 @@
+query Socials {
+  metadadoBy(slug: "redes-sociais") {
+    linksDeRedesSociais {
+      facebook
+      instagram
+      pinterest
+    }
+  }
+}
