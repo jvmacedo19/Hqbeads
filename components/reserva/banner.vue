@@ -1,13 +1,13 @@
 <template>
-    <div id="reserva-banner">
+    <div id="reserva-banner" :style="{background: background}">
         <div class="reserva-principal">
             <div class='banner'>
                 <div class='list'>
                     <div class='item'>
                         <div class='content'>
                             <div class='text'>
-                                <h1>Reserve já</h1>
-                                <h2>Preencha o formulário abaixo e garanta a sua estadia!</h2>
+                                <h1>{{ title }}</h1>
+                                <h2>{{ subtitle }}</h2>
                             </div>
                         </div>
                     </div>
@@ -21,24 +21,17 @@
 
 
 export default {
-    
+    props: {
+        title: String,
+        subtitle: String,
+        background: String
+    }
 }
 
 </script>
 
 <style lang="scss" scoped>
 #reserva-banner {
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('public/assets/modelo/image-4.webp');
-    background-position: bottom;
-
-    @media screen {
-        @media (max-width: 800px) {
-            background-position: center;
-        }
-    }
-
     .reserva-principal {
         .banner {
             height: 55vh;

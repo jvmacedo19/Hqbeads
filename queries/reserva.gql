@@ -1,0 +1,13 @@
+query ReservaLanding {
+  pageBy(uri: "reserva") {
+    camposReserva {
+      titulo
+      subtitulo
+      imagemDeFundo {
+        node {
+          sourceUrl
+        }
+      }
+    }
+  }
+}

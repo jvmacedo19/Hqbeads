@@ -1,0 +1,25 @@
+query GaleriaLanding {
+  pageBy(uri: "galeria") {
+    camposGaleria {
+      titulo
+      subtitulo
+      imagemDeFundo {
+        node {
+          sourceUrl
+        }
+      }
+    }
+  }
+}
+
+query GaleriaImages {
+  pageBy(uri: "galeria") {
+    camposGaleria {
+      galeria {
+        nodes {
+          sourceUrl
+        }
+      }
+    }
+  }
+}

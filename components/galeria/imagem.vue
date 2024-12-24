@@ -1,30 +1,33 @@
 <template>
     <div>
         <div id="imagem-galeria">
-            <div class="row">
-                <div class="row-image">
-                    <img src="public/assets/atracoes/Group 37.webp">
-                </div>
-                <div class="row-image2">
-                    <img src="public/assets/atracoes/Group 37-2.webp">
-                </div>
-            </div>
-            <div class="row2">
-                <div class="row-image">
-                    <div class="imagem"></div>
-                    <div class="imagem2"></div>
-                </div>
-                <div class="row-image2">
-                </div>
-            </div>
-            <div class="row3">
-                <div class="row-image">
-                    <img src="public/assets/propriedade/image 7.webp">
-                </div>
-                <div class="row-image2">
-                    <img src="public/assets/propriedade/image (1).webp">
-                </div>
-            </div>
+            <v-row>
+                <template v-for="(group, i) in layout" :key="i">
+                    <v-col :cols="group.cols" v-if="!group.children">
+                        <v-img
+                        :src="group.url"
+                        height="100%"
+                        cover
+                        ></v-img>
+                    </v-col>
+
+                    <v-col v-if="group.children" class="d-flex flex-column" :cols="group.cols">
+                        <v-row>
+                        <v-col
+                            v-for="(child, childIdx) in group.children"
+                            :key="childIdx"
+                            :cols="child.cols"
+                        >
+                            <v-img
+                            :src="child.url"
+                            height="100%"
+                            cover
+                            ></v-img>
+                        </v-col>
+                        </v-row>
+                    </v-col>
+                </template>
+            </v-row>
         </div>
 
         <div class="galeria-mobile">
@@ -32,13 +35,7 @@
 
             <div class="carossel-container">
                 <v-carousel delimiter-icon="mdi-minus" height="40vh" :show-arrows="false" cycle>
-                    <v-carousel-item src="public/assets/atracoes/Group 37.webp" cover></v-carousel-item>
-                    <v-carousel-item src="public/assets/atracoes/Group 37-2.webp" cover></v-carousel-item>
-                    <v-carousel-item src="public/assets/atracoes/Group 37-1.webp" cover></v-carousel-item>
-                    <v-carousel-item src="public/assets/propriedade/image-2.webp" cover></v-carousel-item>
-                    <v-carousel-item src="public/assets/propriedade/image 7.webp" cover></v-carousel-item>
-                    <v-carousel-item src="public/assets/atracoes/Group 37-3.webp" cover></v-carousel-item>
-                    <v-carousel-item src="public/assets/propriedade/image (1).webp" cover></v-carousel-item>
+                    <v-carousel-item v-for="(img, i) in images" :key="i" :src="img" cover></v-carousel-item>
                 </v-carousel>
             </div>
         </div>
@@ -47,11 +44,35 @@
 </template>
 
 <script>
-export default {
-
-    name: "ImagemGaleria",
-
-};
+    export default {
+        name: "ImagemGaleria",
+        props: {
+            images: Array
+        },
+        computed: {
+            layout() {
+                const layout = [];
+                
+                for (let i = 0; i < this.images.length; i++) {
+                    if (i % 4 === 1 && i + 2 < this.images.length) {
+                        layout.push({
+                            cols: 8,
+                            children: [
+                                { cols: 6, url: this.images[i] },
+                                { cols: 6, url: this.images[i + 1] },
+                            ],
+                        });
+                        
+                        i += 1;
+                    } else {
+                        layout.push({ cols: i % 3 === 0 ? 4 : 6, url: this.images[i] });
+                    }
+                }
+  
+                return layout;
+            }
+        }
+    }
 </script>
 
 <style lang="scss" scoped>
