@@ -1,0 +1,21 @@
+query Footer {
+  metadadoBy(slug: "rodape") {
+    camposRodape {
+      funcionamento {
+        horarioDeAbertura
+        horarioDeEncerramento
+      }
+      endereco {
+        cidade
+        estado
+        numero
+        pais
+        rua
+      }
+      contato {
+        eMail
+        telefone
+      }
+    }
+  }
+}

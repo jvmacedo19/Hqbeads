@@ -6,9 +6,9 @@
             </div>
             <div class="footer-area">
                 <h3>endereço</h3>
-                <p>Rua Não Sei Qual, 33<br />Cidade, ES, Brasil</p>
-                <p>    <v-icon size="32" color="#695640">mdi-email</v-icon> <a href="mailto:email@unify.com">email@unify.com</a></p>
-                <p><v-icon size="32" color="#695640">mdi-phone</v-icon> +55 00 0000-0000</p>
+                <p>{{ address.street }}, {{ address.number }}<br />{{ address.city }}, {{ address.state }}, {{ address.country }}</p>
+                <p v-if="contact.email"><v-icon size="32" color="#695640">mdi-email</v-icon> <a :href="`mailto:${contact.email}`">{{ contact.email }}</a></p>
+                <p v-if="contact.phone"><v-icon size="32" color="#695640">mdi-phone</v-icon><a :href="`tel:${contact.phone}`">{{ contact.phone }}</a></p>
             </div>
             <div class="footer-area">
                 <h3>mapa do site</h3>
@@ -21,18 +21,18 @@
             </div>
             <div class="footer-area">
                 <h3>funcionamento</h3>
-                <p>Nosso time está disponível<br />das 8:00 às 18:00.</p>
+                <p>Nosso time está disponível<br />das {{ operation.start }} às {{ operation.end }}.</p>
                 <v-btn color="#695640">Reserve agora</v-btn>
                 <div class="menu-svg">
-                    <a href="">
+                    <a v-if="socials.instagram" :href="socials.instagram">
                         <img src="~@/public/assets/homepage/instagram copy.svg" alt="ícone instagram"
                             style="width: 20px; margin-right: 10px" />
                     </a>
-                    <a href="">
+                    <a v-if="socials.facebook" :href="socials.facebook">
                         <img src="~@/public/assets/homepage/facebook-circle-svgrepo-com copy.svg" alt="ícone facebook"
                             style="width: 20px;margin-right: 10px" />
                     </a>
-                    <a href="">
+                    <a v-if="socials.pinterest" :href="socials.pinterest">
                         <img src="~@/public/assets/homepage/pinterest-svgrepo-com copy.svg" alt="ícone pinterest"
                             style="width: 20px;margin-right: 10px" />
                     </a>
@@ -53,6 +53,58 @@ export default {
     name: "HQFooter",
     components: {
         HQButton
+    },
+    data() {
+        return {
+            socials: {
+                facebook:null,
+                instagram:null,
+                pinterest:null
+            },
+            contact: {
+                email:null,
+                phone:null
+            },
+            address: {
+                street:null,
+                number:null,
+                city:null,
+                state:null,
+                country:null
+            },
+            operation: {
+                start:null,
+                end:null
+            }
+        }
+    },
+    methods: {
+        async consultSocials() {
+            const query = await GqlSocials();
+
+            this.socials.facebook = query.metadadoBy.linksDeRedesSociais.facebook;
+            this.socials.instagram = query.metadadoBy.linksDeRedesSociais.instagram;
+            this.socials.pinterest = query.metadadoBy.linksDeRedesSociais.pinterest;
+        },
+        async consultFields() {
+            const query = await GqlFooter();
+
+            this.contact.email = query.metadadoBy.camposRodape.contato.eMail;
+            this.contact.phone = query.metadadoBy.camposRodape.contato.telefone;
+
+            this.address.street = query.metadadoBy.camposRodape.endereco.rua;
+            this.address.number = query.metadadoBy.camposRodape.endereco.numero;
+            this.address.city = query.metadadoBy.camposRodape.endereco.cidade;
+            this.address.state = query.metadadoBy.camposRodape.endereco.estado;
+            this.address.country = query.metadadoBy.camposRodape.endereco.pais;
+
+            this.operation.start = query.metadadoBy.camposRodape.funcionamento.horarioDeAbertura;
+            this.operation.end = query.metadadoBy.camposRodape.funcionamento.horarioDeEncerramento;
+        }
+    },
+    async mounted() {
+        this.consultSocials();
+        this.consultFields();
     }
 };
 </script>
