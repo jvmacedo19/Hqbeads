@@ -1,0 +1,13 @@
+query NotFound {
+  pageBy(uri: "pagina-nao-encontrada") {
+    camposNotFound {
+      subtitulo
+      titulo
+      imagemDeFundo {
+        node {
+          sourceUrl
+        }
+      }
+    }
+  }
+}
