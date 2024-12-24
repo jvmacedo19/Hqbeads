@@ -1,0 +1,29 @@
+query AtracoesLanding {
+  pageBy(uri: "atracoes") {
+    camposAtracoes {
+      titulo
+      subtitulo
+      imagemDeFundo {
+        node {
+          sourceUrl
+        }
+      }
+    }
+  }
+}
+
+query AtracoesAttractions {
+  pageBy(uri: "atracoes") {
+    camposAtracoes {
+      atracoes {
+        descricao
+        titulo
+        galeria {
+          nodes {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}

@@ -48,8 +48,6 @@ export default {
                     images.push(img.sourceUrl);
                 })
 
-                console.log(room.capacidade > 1)
-
                 this.rooms.push({
                     title: room?.titulo,
                     description: room?.descricao,
@@ -57,8 +55,6 @@ export default {
                     gallery: images
                 })
             });
-
-            console.log(this.rooms);
         }
     },
     async mounted() {
