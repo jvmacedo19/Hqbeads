@@ -3,7 +3,7 @@
         <div class="menu">
             <div class="logo">
                 <a href="/">
-                    <img src="~@/public/assets/homepage/hqbeds_logo_1 2.webp" alt="logo HQ" />
+                    <img src="~@/public/assets/homepage/hqbeds_logo_1 2.webp" alt="logo HQ" fetchpriority="high"/>
                 </a>
             </div>
             <div style="display: flex;">
@@ -40,7 +40,7 @@
                     <div class="line"></div>
                     <div class="line"></div>
                 </div>
-                <img src="public/assets/homepage/hqbeds_logo_1 2.webp" style="height: 30px;">
+                <img src="public/assets/homepage/hqbeds_logo_1 2.webp" style="height: 30px;" fetchpriority="high" alt="hqbeds logo">
             </button>
             <div v-if="menuOpen" class="mobile-links">
                 <a href="/" class="menu-item">Home</a>
