@@ -21,13 +21,13 @@
                 <a href="/reserva" class="menu-item">Reserva</a>
             </div>
             <div class="menu-svg">
-                <a href="https://www.instagram.com/" >
+                <a href="" aria-label="link instagram">
                     <v-icon color="white" style="width: 20px; margin-right: 10px;text-decoration: none;">mdi-instagram</v-icon>
                 </a>
-                <a href="https://www.instagram.com/" >
+                <a href="" aria-label="link facebook">
                     <v-icon color="white" style="width: 20px; margin-right: 10px;text-decoration: none;">mdi-facebook</v-icon>
                 </a>
-                <a href="https://www.instagram.com/" >
+                <a href="" aria-label="link pinterest">
                     <v-icon color="white" style="width: 20px; margin-right: 10px;text-decoration: none;">mdi-pinterest</v-icon>
                 </a>
             </div>
