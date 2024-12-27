@@ -39,7 +39,8 @@
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13476.178095853405!2d-117.16661169999999!3d32.7180984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d953e7e8e96f59%3A0x4e9e391baad12c80!2sCloudbeds!5e0!3m2!1sen!2sus!4v1696119432384!5m2!1sen!2sus"
                     width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+                    referrerpolicy="no-referrer-when-downgrade" title="google maps">
+                    
                 </iframe>
             </div>
         </div>
