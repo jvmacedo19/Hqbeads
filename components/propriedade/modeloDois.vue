@@ -49,7 +49,7 @@ export default {
 
     @media screen {
         @media (max-width: 800px) {
-            padding: 5% 10% 10% 5%;
+            padding: 5% 10% 10% 10%;
         }
     }
 
@@ -71,6 +71,13 @@ export default {
                 font-size: 48px;
                 font-weight: 400;
                 color: #fff;
+
+                @media screen {
+                    @media (max-width: 800px) {
+                        text-align: center;
+                        font-size: 44px;
+                    }
+                }
             }
 
             p {
