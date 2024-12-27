@@ -17,7 +17,7 @@
         <HQButton style="padding: 2.5% 0;" valor="Reserve já"></HQButton>
         <div class="linha"></div>
         <div class="galeria">
-            <img src="~@/public/assets/homepage/image 4.webp" fetchpriority="low" alt="imagem galeria">
+            <img src="~@/public/assets/homepage/image 4.webp" fetchpriority="low" alt="imagem galeria" loading="lazy">
             <div class="texto-galeria">
                 <h2>Nossa galeria</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas placerat erat nisi, ut ornare lorem
