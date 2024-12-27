@@ -68,7 +68,11 @@ export default {
 
     .avaliacao {
         display: contents;
-        
+
+        .v-carousel {
+            border-radius: 20px;
+        }
+
 
         .texto {
             font-family: "Montserrat", sans-serif;
@@ -76,6 +80,10 @@ export default {
             font-weight: 300;
             width: 80%;
             text-align: center;
+
+            @media(max-width:800px) {
+                font-size: 16px;
+            }
         }
 
         .v-btn--variant-elevated {

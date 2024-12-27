@@ -40,7 +40,7 @@
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13476.178095853405!2d-117.16661169999999!3d32.7180984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d953e7e8e96f59%3A0x4e9e391baad12c80!2sCloudbeds!5e0!3m2!1sen!2sus!4v1696119432384!5m2!1sen!2sus"
                     width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade" title="google maps">
-                    
+
                 </iframe>
             </div>
         </div>
@@ -94,8 +94,11 @@ export default {
     .avaliacao {
         display: contents;
 
-        .v-carousel{
+        .v-carousel {
             border-radius: 20px;
+            @media(max-width:800px) {
+                margin-bottom: 5%;
+            }
         }
 
         .texto {
@@ -104,6 +107,10 @@ export default {
             font-weight: 300;
             width: 80%;
             text-align: center;
+
+            @media(max-width:800px) {
+                font-size: 16px;
+            }
         }
 
         .v-btn--variant-elevated {
@@ -121,6 +128,13 @@ export default {
         height: 2px;
         background-color: #6f5d48;
         margin-top: 2.5%;
+
+        @media screen {
+            @media (max-width: 800px) {
+                margin-top: 5%;
+                margin-bottom: 5%;
+            }
+        }
     }
 
     .galeria {
@@ -197,17 +211,22 @@ export default {
 
         h2 {
             padding: 5% 0 0 0;
+            @media(max-width:800px) {
+                padding: 0;
+            }
         }
 
         p {
             text-align: center;
             margin-bottom: 5%;
             width: 35%;
+
             @media screen {
-            @media (max-width: 800px) {
-                width: 100%;
+                @media (max-width: 800px) {
+                    width: 100%;
+                    margin-bottom: 10%;
+                }
             }
-        }
         }
     }
 }

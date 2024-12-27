@@ -181,7 +181,7 @@ export default {
 }
 
 .galeria-mobile {
-    padding: 2.5% 10%;
+    padding: 5% 10% 10% 10%;
 
     @media screen {
         @media (min-width: 800px) {

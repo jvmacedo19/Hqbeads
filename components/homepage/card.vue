@@ -40,6 +40,10 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
 
+    @media(max-width:800px) {
+        padding: 10%;
+    }
+
     h2 {
         padding: 2.5% 0;
         font-size: 36px;
@@ -80,7 +84,7 @@ export default {
                 @media (max-width:800px) {
                     flex: auto;
                     height: 350px;
-                    margin-bottom: 5%;
+                    margin-bottom: 10%;
                 }
             }
 
@@ -99,7 +103,7 @@ export default {
 
                 @media screen {
                     @media (max-width: 800px) {
-                        font-size: 40px;
+                        font-size: 48px;
                     }
                 }
             }
@@ -141,7 +145,7 @@ export default {
 
                 @media screen {
                     @media (max-width: 800px) {
-                        font-size: 40px;
+                        font-size: 48px;
                     }
                 }
 

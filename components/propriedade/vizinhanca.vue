@@ -42,6 +42,13 @@ export default {
     width: 100%;
     overflow: hidden;
 
+    @media screen {
+        @media (max-width: 800px) {
+            height: auto;
+            padding: 10%;
+        }
+    }
+
     .background {
         flex: 1;
         background-image: url("public/assets/propriedade/image-2.webp");

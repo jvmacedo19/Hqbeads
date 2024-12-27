@@ -131,7 +131,7 @@ export default {
                 @media(max-width:800px) {
                     margin-left: 0;
                     padding: 20px;
-                    margin-bottom: 5%;
+                    margin-bottom: 10%;
                 }
 
                 .image1 {

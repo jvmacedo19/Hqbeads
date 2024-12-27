@@ -12,8 +12,7 @@
                     <v-carousel delimiter-icon="mdi-minus" height="40vh" :show-arrows="false">
                         <v-carousel-item src="public/assets/propriedade/image-1.webp" cover></v-carousel-item>
                         <v-carousel-item src="public/assets/propriedade/image-1.webp" cover></v-carousel-item>
-                        <v-carousel-item src="public/assets/propriedade/image-1.webp"
-                            cover></v-carousel-item>
+                        <v-carousel-item src="public/assets/propriedade/image-1.webp" cover></v-carousel-item>
                     </v-carousel>
                 </div>
             </div>
@@ -48,9 +47,19 @@ export default {
     background-size: cover;
     background-repeat: no-repeat;
 
+    @media screen {
+        @media (max-width: 800px) {
+            padding: 5% 10% 10% 5%;
+        }
+    }
+
     .container {
         display: flex;
         gap: 5%;
+
+        @media(max-width:800px) {
+            flex-direction: column;
+        }
 
         .modelo-item1 {
             display: flex;
@@ -68,6 +77,10 @@ export default {
                 font-size: 18px;
                 margin-bottom: 25px;
                 color: #fff;
+
+                @media(max-width:800px) {
+                    text-align: center;
+                }
             }
 
         }
