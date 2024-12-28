@@ -32,7 +32,8 @@
                 <iframe
                     :src="location.link"
                     width="100%" height="650" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+                    referrerpolicy="no-referrer-when-downgrade" title="google maps">
+
                 </iframe>
             </div>
         </div>
@@ -80,8 +81,11 @@ export default {
     .avaliacao {
         display: contents;
 
-        .v-carousel{
+        .v-carousel {
             border-radius: 20px;
+            @media(max-width:800px) {
+                margin-bottom: 5%;
+            }
         }
 
         .texto {
@@ -90,6 +94,10 @@ export default {
             font-weight: 300;
             width: 80%;
             text-align: center;
+
+            @media(max-width:800px) {
+                font-size: 16px;
+            }
         }
 
         .v-btn--variant-elevated {
@@ -107,6 +115,13 @@ export default {
         height: 2px;
         background-color: #6f5d48;
         margin-top: 2.5%;
+
+        @media screen {
+            @media (max-width: 800px) {
+                margin-top: 5%;
+                margin-bottom: 5%;
+            }
+        }
     }
 
     .galeria {
@@ -183,12 +198,22 @@ export default {
 
         h2 {
             padding: 5% 0 0 0;
+            @media(max-width:800px) {
+                padding: 0;
+            }
         }
 
         p {
             text-align: center;
             margin-bottom: 5%;
             width: 35%;
+
+            @media screen {
+                @media (max-width: 800px) {
+                    width: 100%;
+                    margin-bottom: 10%;
+                }
+            }
         }
     }
 }

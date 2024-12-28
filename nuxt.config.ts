@@ -6,8 +6,8 @@ export default defineNuxtConfig({
   },
   plugins: ['~/plugins/darkMode.client.js'],
   typescript: {
-		shim: false,
-	},
+    shim: false,
+  },
   modules: [
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
@@ -26,6 +26,9 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'pt-BR' // Adiciona o atributo lang
+      },
       link: [
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap' },
         {rel:'stylesheet', href:'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'},

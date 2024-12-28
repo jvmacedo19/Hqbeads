@@ -44,6 +44,7 @@
     </div>
 </template>
 
+
 <script>
 
 import HQButton from '@/components/geral/button.vue';
@@ -68,20 +69,21 @@ export default {
     background-image: url("public/assets/homepage/FUNDO-BRANCO.webp");
     background-size: cover;
     background-repeat: no-repeat;
+}
 
-    .info-texto {
-        text-align: center;
+.info-texto {
+    text-align: center;
 
-        h2 {
-            font-size: 48px;
-            margin-bottom: 5%;
-        }
-
-        p {
-            font-size: 18px;
-            margin-bottom: 5%;
-        }
+    h2 {
+        font-size: 48px;
+        margin-bottom: 5%;
     }
+
+    p {
+        font-size: 18px;
+        margin-bottom: 5%;
+    }
+}
 
     #about-solucoes {
 
@@ -118,101 +120,56 @@ export default {
                 }
             }
 
-            .aboutarea {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-                flex: 1;
-                border-radius: 10px;
-                padding: 40px;
-                margin: 0 0 40px 40px;
-                box-shadow: 3px 3px 3.5px rgba(0, 0, 0, 0.16);
+.aboutarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    background-size: cover;
+    background-position: center;
 
-                @media (min-width: 801px) and (max-width: 1440px) {
-                    padding: 20px;
-                }
-
-                @media(max-width:800px) {
-                    margin-left: 0;
-                    padding: 20px;
-                    margin-bottom: 5%;
-                }
-
-                .image1 {
-                    width: 90px;
-                    height: 90px;
-                    background-position: center;
-                    background-size: cover;
-
-                    @media (min-width: 801px) and (max-width: 1440px) {
-                        width: 60px;
-                        height: 60px;
-                        margin-bottom: 10px;
-                    }
-                }
-
-                .image2 {
-                    width: 90px;
-                    height: 90px;
-                    background-position: center;
-                    background-size: cover;
-
-                    @media (min-width: 801px) and (max-width: 1440px) {
-                        width: 60px;
-                        height: 60px;
-                        margin-bottom: 10px;
-                    }
-                }
-
-                .image3 {
-                    width: 90px;
-                    height: 90px;
-                    background-position: center;
-                    background-size: cover;
-
-                    @media (min-width: 801px) and (max-width: 1440px) {
-                        width: 60px;
-                        height: 60px;
-                        margin-bottom: 10px;
-                    }
-                }
-
-                .text {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    text-align: center;
-                    color: #fff;
-                    padding: 0 0 2.5% 0;
-
-                    h2 {
-                        font-size: 36px;
-
-                        @media (min-width: 801px) and (max-width: 1440px) {
-                            font-size: 36px
-                        }
-                    }
-
-                    p {
-                        font-size: 18px;
-                        font-weight: 300;
-                        margin: 15px 0;
-                        text-align: center;
-                        color: var(--text-color2);
-
-                        @media (min-width: 801px) and (max-width: 1440px) {
-                            font-size: 18px;
-                        }
-                    }
-                }
-            }
-
-            .aboutarea:hover {
-                background: #695641;
-            }
+    @media screen {
+        @media (max-width: 800px) {
+            padding: 20% 0;
         }
     }
+
+    .text {
+        color: #fff;
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+/* Estilos individuais para os cards com imagens */
+.programacoes {
+    background-color: #695641;
+}
+
+.tv-filmes {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("public/assets/homepage/image 6.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.cafe {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("public/assets/homepage/image.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.preco {
+    background-color: #695641;
 }
 </style>

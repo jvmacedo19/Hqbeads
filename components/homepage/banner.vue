@@ -116,7 +116,7 @@ export default {
                                 ::v-deep(.v-field--variant-solo, .v-field--variant-solo-filled) {
                                     box-shadow: none;
                                     border: 1px solid #ccc;
-                                    
+
                                 }
                             }
 
@@ -147,6 +147,11 @@ export default {
 
     ::v-deep .v-input__details {
         display: none;
+    }
+
+    ::v-deep(.v-label) {
+        color: #000; // Substitua pelo código da cor desejada
+        opacity: 100%;
     }
 }
 </style>
