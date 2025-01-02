@@ -56,7 +56,7 @@ export default {
 
 <style lang="scss" scoped>
 #imagem-galeria {
-    padding: 2.5% 10%;
+    padding: 5% 10%;
 
     @media screen {
         @media (max-width: 800px) {
