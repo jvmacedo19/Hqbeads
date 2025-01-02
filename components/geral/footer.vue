@@ -22,7 +22,9 @@
             <div class="footer-area">
                 <h3>funcionamento</h3>
                 <p>Nosso time está disponível<br />das {{ operation.start }} às {{ operation.end }}.</p>
-                <v-btn color="#695640">Reserve agora</v-btn>
+                <a href="/reserva">
+                    <v-btn color="#695640">Reserve agora</v-btn>
+                </a>
                 <div class="menu-svg">
                     <a v-if="socials.instagram" :href="socials.instagram">
                         <img src="~@/public/assets/homepage/instagram copy.svg" alt="ícone instagram"

@@ -18,7 +18,7 @@
                 <a href="/acomodacoes" class="menu-item">Acomodações</a>
                 <a href="/atracoes" class="menu-item">Atrações</a>
                 <a href="/galeria" class="menu-item">Galeria</a>
-                <a href="/reserva" class="menu-item">Reserva</a>
+                <a href="/reserva" class="menu-item">Reserve Agora</a>
             </div>
             <div class="menu-svg">
                 <a v-if="socials.instagram" :href="socials.instagram">
