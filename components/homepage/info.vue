@@ -171,5 +171,5 @@ export default {
 
 .preco {
     background-color: #695641;
-}
+}}}
 </style>
