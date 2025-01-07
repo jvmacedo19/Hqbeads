@@ -1,35 +1,43 @@
 <template>
     <div>
+        <!-- Galeria Desktop -->
         <div id="imagem-galeria">
             <v-row>
-                <template v-for="(group, i) in layout" :key="i">
-                    <v-col :cols="group.cols" v-if="!group.children">
-                        <v-img
-                        :src="group.url"
-                        height="100%"
-                        cover
-                        ></v-img>
-                    </v-col>
+                <!-- Primeira linha -->
+                <v-col cols="4">
+                    <v-img :src="images[0]" height="100%" cover></v-img>
+                </v-col>
+                <v-col cols="8">
+                    <v-img :src="images[1]" height="100%" cover></v-img>
+                </v-col>
 
-                    <v-col v-if="group.children" class="d-flex flex-column" :cols="group.cols">
-                        <v-row>
-                        <v-col
-                            v-for="(child, childIdx) in group.children"
-                            :key="childIdx"
-                            :cols="child.cols"
-                        >
-                            <v-img
-                            :src="child.url"
-                            height="100%"
-                            cover
-                            ></v-img>
+                <!-- Segunda linha -->
+                <v-col cols="6">
+                    <v-img :src="images[4]" height="100%" cover></v-img>
+                </v-col>
+                <v-col cols="6">
+                    <v-row>
+                        <v-col cols="12">
+                            <v-img :src="images[5]" height="100%" cover></v-img>
                         </v-col>
-                        </v-row>
-                    </v-col>
-                </template>
+                        <v-col cols="12">
+                            <v-img :src="images[6]" height="100%" cover></v-img>
+                        </v-col>
+                    </v-row>
+                </v-col>
+
+                <!-- Terceira linha -->
+                <v-col cols="8">
+                    <v-img :src="images[2]" height="100%" cover></v-img>
+                </v-col>
+                <v-col cols="4">
+                    <v-img :src="images[3]" height="100%" cover></v-img>
+                </v-col>
+
             </v-row>
         </div>
 
+        <!-- Galeria Mobile -->
         <div class="galeria-mobile">
             <h2 style="text-align: center; font-size: 48px;">Galeria:</h2>
 
@@ -39,40 +47,39 @@
                 </v-carousel>
             </div>
         </div>
-
     </div>
 </template>
 
 <script>
-    export default {
-        name: "ImagemGaleria",
-        props: {
-            images: Array
-        },
-        computed: {
-            layout() {
-                const layout = [];
-                
-                for (let i = 0; i < this.images.length; i++) {
-                    if (i % 4 === 1 && i + 2 < this.images.length) {
-                        layout.push({
-                            cols: 8,
-                            children: [
-                                { cols: 6, url: this.images[i] },
-                                { cols: 6, url: this.images[i + 1] },
-                            ],
-                        });
-                        
-                        i += 1;
-                    } else {
-                        layout.push({ cols: i % 3 === 0 ? 4 : 6, url: this.images[i] });
-                    }
+export default {
+    name: "ImagemGaleria",
+    props: {
+        images: Array, // Lista de imagens passada como propriedade
+    },
+    computed: {
+        layout() {
+            const layout = [];
+
+            for (let i = 0; i < this.images.length; i++) {
+                if (i % 4 === 1 && i + 2 < this.images.length) {
+                    layout.push({
+                        cols: 8,
+                        children: [
+                            { cols: 6, url: this.images[i] },
+                            { cols: 6, url: this.images[i + 1] },
+                        ],
+                    });
+
+                    i += 1;
+                } else {
+                    layout.push({ cols: i % 3 === 0 ? 4 : 6, url: this.images[i] });
                 }
-  
-                return layout;
             }
-        }
-    }
+
+            return layout;
+        },
+    },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -95,15 +102,12 @@
         .row-image2 {
             height: 650px;
             display: flex;
-            /* Certifique-se de que o contêiner também use flexbox */
             justify-content: center;
             align-items: center;
 
             img {
                 width: 100%;
-                /* Ocupa toda a largura do contêiner */
                 height: 100%;
-                /* Ocupa toda a altura do contêiner */
                 object-fit: cover;
             }
         }
@@ -178,15 +182,12 @@
         .row-image2 {
             height: 650px;
             display: flex;
-            /* Certifique-se de que o contêiner também use flexbox */
             justify-content: center;
             align-items: center;
 
             img {
                 width: 100%;
-                /* Ocupa toda a largura do contêiner */
                 height: 100%;
-                /* Ocupa toda a altura do contêiner */
                 object-fit: cover;
             }
         }
