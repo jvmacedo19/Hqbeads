@@ -3,7 +3,7 @@
       <iframe 
         src="https://dev.hqbookings.hqbeds.com.br/demo?widget=1" 
         width="100%" 
-        scrolling="no" 
+        scrolling="yes" 
         frameborder="0"
         id="hqbookings" 
         style="overflow: hidden; height: 968px;">

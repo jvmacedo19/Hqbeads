@@ -7,15 +7,8 @@
             </div>
             <div class='modelo-item2'>
                 <div class="carossel-container">
-<<<<<<< HEAD
                     <v-carousel delimiter-icon="mdi-minus" height="40vh" :show-arrows="false" cycle>
                         <v-carousel-item v-for="(image, i) in images" :key="i" :src="image" cover></v-carousel-item>
-=======
-                    <v-carousel delimiter-icon="mdi-minus" height="40vh" :show-arrows="false">
-                        <v-carousel-item src="public/assets/propriedade/image-1.webp" cover></v-carousel-item>
-                        <v-carousel-item src="public/assets/propriedade/image-1.webp" cover></v-carousel-item>
-                        <v-carousel-item src="public/assets/propriedade/image-1.webp" cover></v-carousel-item>
->>>>>>> main
                     </v-carousel>
                 </div>
             </div>
